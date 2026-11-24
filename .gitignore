@@ -1,18 +1,20 @@
-# Python
+# Python virtual environments & build artifacts
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
-build/
+/env/
+/venv/
+.venv/
+/build/
 develop-eggs/
-dist/
+/dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -38,3 +40,7 @@ frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 frontend/.pnpm-debug.log*
+
+# Whitelist frontend libraries
+!frontend/src/lib/
+!frontend/src/lib/**

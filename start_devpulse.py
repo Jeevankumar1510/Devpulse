@@ -40,8 +40,12 @@ def main():
             time.sleep(1)
     except KeyboardInterrupt:
         print("\nShutting down DevPulse servers...")
-        backend_proc.terminate()
-        frontend_proc.terminate()
+        if sys.platform == "win32":
+            subprocess.call(["taskkill", "/F", "/T", "/PID", str(backend_proc.pid)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.call(["taskkill", "/F", "/T", "/PID", str(frontend_proc.pid)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            backend_proc.terminate()
+            frontend_proc.terminate()
         print("DevPulse shutdown complete.")
 
 if __name__ == "__main__":

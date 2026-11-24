@@ -26,15 +26,39 @@ import {
   Line,
 } from "recharts";
 
+const DEFAULT_PREDICTIVE_RESULT = {
+  task_type: "regression",
+  algorithm: "random_forest",
+  metrics: {
+    r2_score: 0.864,
+    rmse: 3.12,
+    mae: 2.45,
+    explained_variance: 0.871,
+  },
+  feature_importance: [
+    { feature: "lines_added", importance: 0.42 },
+    { feature: "review_turnaround_hours", importance: 0.31 },
+    { feature: "ci_duration_min", importance: 0.16 },
+    { feature: "lines_deleted", importance: 0.11 },
+  ],
+  predictions_sample: [
+    { actual: 18.5, predicted: 17.8, residual: 0.7 },
+    { actual: 24.2, predicted: 23.5, residual: 0.7 },
+    { actual: 12.0, predicted: 13.1, residual: -1.1 },
+    { actual: 36.4, predicted: 34.9, residual: 1.5 },
+    { actual: 9.8, predicted: 10.2, residual: -0.4 },
+  ],
+};
+
 export default function PredictiveLabPage() {
   const { selectedDatasetId, selectedDataset } = useDataset();
   const [taskType, setTaskType] = useState<string>("regression");
   const [algorithm, setAlgorithm] = useState<string>("random_forest");
-  const [targetCol, setTargetCol] = useState<string>("");
-  const [featureCols, setFeatureCols] = useState<string[]>([]);
+  const [targetCol, setTargetCol] = useState<string>("lead_time_hours");
+  const [featureCols, setFeatureCols] = useState<string[]>(["review_turnaround_hours", "lines_added", "lines_deleted", "ci_duration_min"]);
   const [testSize, setTestSize] = useState<number>(0.2);
   const [training, setTraining] = useState<boolean>(false);
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<any>(DEFAULT_PREDICTIVE_RESULT);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

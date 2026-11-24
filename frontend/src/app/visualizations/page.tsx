@@ -28,14 +28,18 @@ import {
   Legend,
 } from "recharts";
 
+const DEFAULT_CHART_DATA = [
+  { label: "auth-service", value: 18.5 },
+  { label: "payment-api", value: 14.2 },
+  { label: "web-client", value: 22.1 },
+  { label: "checkout-worker", value: 16.8 },
+  { label: "notification-svc", value: 11.4 },
+];
+
 export default function VisualizationStudioPage() {
   const { selectedDatasetId, selectedDataset } = useDataset();
   const [chartType, setChartType] = useState<"histogram" | "bar" | "line" | "scatter" | "boxplot">("bar");
   const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Chart configuration parameters
   const [selectedCol, setSelectedCol] = useState("");
@@ -46,8 +50,12 @@ export default function VisualizationStudioPage() {
   const [yCol, setYCol] = useState("");
   const [bins, setBins] = useState(12);
 
-  const [chartData, setChartData] = useState<any[]>([]);
+  const [chartData, setChartData] = useState<any[]>(DEFAULT_CHART_DATA);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const columns = selectedDataset?.columns_metadata?.map((c: any) => c.name) || [];
   const numericCols = selectedDataset?.columns_metadata?.filter((c: any) =>

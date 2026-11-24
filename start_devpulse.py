@@ -1,9 +1,8 @@
 """
 DevPulse Unified Dual-Server Launcher Script
 Starts both FastAPI Backend (port 8000) and Next.js Frontend (port 3000).
-Supports:
-  python start_devpulse.py          (Default: starts Next.js dev server & FastAPI)
-  python start_devpulse.py --prod   (Starts production server with optimized pre-built bundles)
+Usage:
+  python start_devpulse.py
 """
 import subprocess
 import sys
@@ -14,8 +13,6 @@ def main():
     root_dir = os.path.dirname(os.path.abspath(__file__))
     backend_dir = os.path.join(root_dir, "backend")
     frontend_dir = os.path.join(root_dir, "frontend")
-
-    is_prod = "--prod" in sys.argv or "--start" in sys.argv
 
     print("==================================================")
     print("   DEVPULSE - COMPLETE DATA ANALYTICS PLATFORM    ")
@@ -28,15 +25,9 @@ def main():
         cwd=backend_dir
     )
 
-    if is_prod:
-        print("Starting Next.js Production Server on http://localhost:3000...")
-        frontend_cmd = "npx next start -p 3000"
-    else:
-        print("Starting Next.js Development Server on http://localhost:3000...")
-        frontend_cmd = "npx next dev -p 3000"
-
+    print("Starting Next.js Frontend on http://localhost:3000...")
     frontend_proc = subprocess.Popen(
-        frontend_cmd,
+        "npm run dev",
         cwd=frontend_dir,
         shell=True
     )

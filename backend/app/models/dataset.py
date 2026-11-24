@@ -1,6 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import Column, String, Integer, DateTime, Boolean, JSON, Float, Text
 from app.database import Base
+
+def utc_now():
+    return datetime.now(timezone.utc)
 
 class Dataset(Base):
     __tablename__ = "datasets"
@@ -17,5 +20,5 @@ class Dataset(Base):
     is_synthetic = Column(Boolean, default=False)
     synthetic_disclosure = Column(Text, nullable=True)
     category = Column(String, default="General") # Engineering, Sales, Quality, HR, etc.
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
+    updated_at = Column(DateTime, default=utc_now, onupdate=utc_now)

@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 STORAGE_DIR = BASE_DIR / "storage"
@@ -15,6 +15,8 @@ DEMO_DATA_DIR.mkdir(parents=True, exist_ok=True)
 EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", extra="allow")
+
     PROJECT_NAME: str = "DevPulse Analytics Platform"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api/v1"
@@ -39,9 +41,5 @@ class Settings(BaseSettings):
     # Safe Query Limits
     MAX_QUERY_ROWS: int = 10000
     QUERY_TIMEOUT_SECONDS: int = 15
-    
-    class Config:
-        env_file = ".env"
-        extra = "allow"
 
 settings = Settings()

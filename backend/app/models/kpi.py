@@ -1,6 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import Column, String, Integer, DateTime, Float, Text, Boolean, JSON
 from app.database import Base
+
+def utc_now():
+    return datetime.now(timezone.utc)
 
 class KPI(Base):
     __tablename__ = "kpis"
@@ -15,7 +18,7 @@ class KPI(Base):
     trend = Column(String, default="UP") # UP, DOWN, NEUTRAL
     change_percentage = Column(Float, default=0.0)
     formula_description = Column(Text, nullable=True)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    updated_at = Column(DateTime, default=utc_now, onupdate=utc_now)
 
 class DataQualityRule(Base):
     __tablename__ = "data_quality_rules"
@@ -28,4 +31,4 @@ class DataQualityRule(Base):
     score = Column(Float, default=100.0)
     status = Column(String, default="PASSED") # PASSED, FAILED, WARNING
     violation_count = Column(Integer, default=0)
-    last_evaluated_at = Column(DateTime, default=datetime.utcnow)
+    last_evaluated_at = Column(DateTime, default=utc_now)

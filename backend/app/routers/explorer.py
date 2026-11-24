@@ -14,7 +14,7 @@ def preview_dataset(
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=1, le=500),
     sort_by: Optional[str] = None,
-    sort_order: str = Query("asc", regex="^(asc|desc)$"),
+    sort_order: str = Query("asc", pattern="^(asc|desc)$"),
     filter_col: Optional[str] = None,
     filter_val: Optional[str] = None,
     db: Session = Depends(get_db)

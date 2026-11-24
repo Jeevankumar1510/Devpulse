@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List
 from sqlalchemy.orm import Session
 from app.services.engineering_service import EngineeringService
@@ -12,7 +12,7 @@ class ReportService:
         eng_data = EngineeringService.get_engineering_intelligence(db)
         bi_data = BIService.get_business_insights(db)
         
-        now_str = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
         if report_type == "engineering_dora":
             title = "DevPulse Engineering Velocity & DORA Intelligence Brief"

@@ -1,7 +1,10 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import Column, String, Integer, DateTime, JSON, Text, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
+
+def utc_now():
+    return datetime.now(timezone.utc)
 
 class ETLPipeline(Base):
     __tablename__ = "etl_pipelines"
@@ -16,7 +19,7 @@ class ETLPipeline(Base):
     schedule_interval = Column(String, default="daily") # manual, hourly, daily, weekly
     status = Column(String, default="ACTIVE") # ACTIVE, PAUSED, FAILED
     last_run_at = Column(DateTime, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
     
     logs = relationship("ETLLog", back_populates="pipeline", cascade="all, delete-orphan")
 
@@ -31,6 +34,6 @@ class ETLLog(Base):
     rows_loaded = Column(Integer, default=0)
     duration_seconds = Column(Integer, default=0)
     error_message = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utc_now)
 
     pipeline = relationship("ETLPipeline", back_populates="logs")

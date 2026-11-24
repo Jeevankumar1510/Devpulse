@@ -1,11 +1,14 @@
 import uuid
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
 from sqlalchemy.orm import Session
 from app.models.etl_pipeline import ETLPipeline, ETLLog
 from app.models.dataset import Dataset
 from app.services.dataset_service import DatasetService
+
+def utc_now():
+    return datetime.now(timezone.utc)
 
 class ETLService:
     @staticmethod
@@ -27,7 +30,7 @@ class ETLService:
                 destination_table="fact_engineering_pull_requests",
                 schedule_interval="hourly",
                 status="ACTIVE",
-                last_run_at=datetime.utcnow()
+                last_run_at=utc_now()
             )
             p2 = ETLPipeline(
                 id="etl-dora-deployments",
@@ -43,7 +46,7 @@ class ETLService:
                 destination_table="fact_dora_deployments",
                 schedule_interval="daily",
                 status="ACTIVE",
-                last_run_at=datetime.utcnow()
+                last_run_at=utc_now()
             )
             p3 = ETLPipeline(
                 id="etl-defect-intelligence",
@@ -58,7 +61,7 @@ class ETLService:
                 destination_table="fact_software_defects",
                 schedule_interval="daily",
                 status="ACTIVE",
-                last_run_at=datetime.utcnow()
+                last_run_at=utc_now()
             )
             db.add_all([p1, p2, p3])
             db.commit()
@@ -73,7 +76,7 @@ class ETLService:
                     rows_transformed=rows - 5,
                     rows_loaded=rows - 5,
                     duration_seconds=int(rows * 0.04) + 1,
-                    created_at=datetime.utcnow()
+                    created_at=utc_now()
                 )
                 db.add(log)
             db.commit()
@@ -107,9 +110,9 @@ class ETLService:
             rows_transformed=transformed_rows,
             rows_loaded=loaded_rows,
             duration_seconds=duration,
-            created_at=datetime.utcnow()
+            created_at=utc_now()
         )
-        pipeline.last_run_at = datetime.utcnow()
+        pipeline.last_run_at = utc_now()
         db.add(log)
         db.commit()
 

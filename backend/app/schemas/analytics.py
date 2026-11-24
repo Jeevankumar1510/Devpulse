@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from datetime import datetime
 
 class DatasetBase(BaseModel):
@@ -8,6 +8,8 @@ class DatasetBase(BaseModel):
     category: str = "General"
 
 class DatasetResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str
     name: str
     description: Optional[str] = None
@@ -20,9 +22,6 @@ class DatasetResponse(BaseModel):
     synthetic_disclosure: Optional[str] = None
     category: str = "General"
     created_at: datetime
-
-    class Config:
-        from_attributes = True
 
 class ColumnProfile(BaseModel):
     name: str

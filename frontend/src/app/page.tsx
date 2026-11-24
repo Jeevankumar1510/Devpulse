@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { api } from "@/lib/api";
+import { useDataset } from "@/components/DatasetContext";
 import { KPICard } from "@/components/KPICard";
 import {
   Rocket,
@@ -16,6 +17,20 @@ import {
   FileSpreadsheet,
   Brain,
   Code2,
+  Sparkles,
+  Zap,
+  Play,
+  Terminal,
+  CheckCircle2,
+  Workflow,
+  Layers,
+  FileText,
+  BarChart3,
+  GitPullRequest,
+  Compass,
+  Sigma,
+  Table2,
+  Wand2,
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -30,9 +45,184 @@ import {
   CartesianGrid,
 } from "recharts";
 
+const FEATURE_CATEGORIES = [
+  { id: "all", name: "All Modules (19)" },
+  { id: "engineering", name: "Engineering & DORA" },
+  { id: "analytics", name: "Data Analytics & SQL" },
+  { id: "ml_stats", name: "Predictive ML & Stats" },
+  { id: "bi_quality", name: "BI & Governance" },
+];
+
+const PLATFORM_FEATURES = [
+  {
+    name: "Overview Dashboard",
+    category: "engineering",
+    href: "/",
+    icon: Activity,
+    badge: "Executive",
+    desc: "Composite DORA velocity index, KPI scorecards, and live bottleneck detection.",
+    color: "from-blue-500/20 to-cyan-500/20 text-cyan-400",
+  },
+  {
+    name: "GitHub Engineering Analytics",
+    category: "engineering",
+    href: "/github-analytics",
+    icon: GitPullRequest,
+    badge: "DORA",
+    desc: "PR review turnaround distributions, CI pass rates, and revert risks.",
+    color: "from-indigo-500/20 to-blue-500/20 text-indigo-400",
+  },
+  {
+    name: "Software Quality Intelligence",
+    category: "engineering",
+    href: "/software-quality",
+    icon: ShieldCheck,
+    badge: "Quality",
+    desc: "Defect density per KLOC, escape defects, and component risk ranking.",
+    color: "from-emerald-500/20 to-teal-500/20 text-emerald-400",
+  },
+  {
+    name: "SQL Analytics Studio",
+    category: "analytics",
+    href: "/sql",
+    icon: Database,
+    badge: "DuckDB OLAP",
+    desc: "Safe read-only analytical queries with CTEs, window functions, and EXPLAIN plans.",
+    color: "from-blue-500/20 to-violet-500/20 text-blue-400",
+  },
+  {
+    name: "Excel Analytics Studio",
+    category: "analytics",
+    href: "/excel",
+    icon: FileSpreadsheet,
+    badge: "Formulas & M",
+    desc: "Dynamic pivot tables, formula simulations (VLOOKUP, SUMIFS), and Power Query M.",
+    color: "from-emerald-500/20 to-green-500/20 text-emerald-400",
+  },
+  {
+    name: "Python Analytics Lab",
+    category: "analytics",
+    href: "/python",
+    icon: Terminal,
+    badge: "Pandas Sandbox",
+    desc: "Sandboxed DataFrame transforms with stdout console capture and table rendering.",
+    color: "from-amber-500/20 to-yellow-500/20 text-amber-400",
+  },
+  {
+    name: "Data Explorer",
+    category: "analytics",
+    href: "/explorer",
+    icon: Table2,
+    badge: "Profiling",
+    desc: "Paginated data grid with column statistical profiling, search, and type inspection.",
+    color: "from-purple-500/20 to-pink-500/20 text-purple-400",
+  },
+  {
+    name: "Data Cleaning Studio",
+    category: "analytics",
+    href: "/cleaning",
+    icon: Wand2,
+    badge: "Wrangling",
+    desc: "Interactive imputation, deduplication, IQR outlier filtering, and min-max scaling.",
+    color: "from-fuchsia-500/20 to-purple-500/20 text-fuchsia-400",
+  },
+  {
+    name: "EDA Workspace",
+    category: "analytics",
+    href: "/eda",
+    icon: Compass,
+    badge: "Automated",
+    desc: "Univariate distributions, skewness moments, and Pearson correlation heatmaps.",
+    color: "from-cyan-500/20 to-blue-500/20 text-cyan-400",
+  },
+  {
+    name: "Statistics Lab",
+    category: "ml_stats",
+    href: "/statistics",
+    icon: Sigma,
+    badge: "Hypothesis & A/B",
+    desc: "Welch's t-test, ANOVA, Chi-Square, and A/B test sample size calculators.",
+    color: "from-rose-500/20 to-orange-500/20 text-rose-400",
+  },
+  {
+    name: "Predictive Analytics Lab",
+    category: "ml_stats",
+    href: "/predictive",
+    icon: Brain,
+    badge: "Scikit-Learn",
+    desc: "Regression, classification, K-Means clustering, and Isolation Forest anomalies.",
+    color: "from-violet-500/20 to-purple-500/20 text-violet-400",
+  },
+  {
+    name: "Visualization Studio",
+    category: "analytics",
+    href: "/visualizations",
+    icon: BarChart3,
+    badge: "Recharts",
+    desc: "Interactive histograms, box plots with quantiles, and multi-series line/bar charts.",
+    color: "from-blue-500/20 to-emerald-500/20 text-emerald-400",
+  },
+  {
+    name: "Data Quality Center",
+    category: "bi_quality",
+    href: "/quality",
+    icon: CheckCircle2,
+    badge: "Scorecard",
+    desc: "Weighted quality scorecard evaluating completeness, uniqueness, and validity.",
+    color: "from-teal-500/20 to-emerald-500/20 text-teal-400",
+  },
+  {
+    name: "ETL Pipeline Manager",
+    category: "bi_quality",
+    href: "/etl",
+    icon: Workflow,
+    badge: "Warehouse Sync",
+    desc: "Extract, Transform, Load pipeline orchestration and sync audit logging.",
+    color: "from-amber-500/20 to-orange-500/20 text-amber-400",
+  },
+  {
+    name: "Power BI Integration",
+    category: "bi_quality",
+    href: "/powerbi",
+    icon: Layers,
+    badge: "Star Schema",
+    desc: "Fact and dimension tables, copyable DAX measure repository, and export models.",
+    color: "from-yellow-500/20 to-amber-500/20 text-yellow-400",
+  },
+  {
+    name: "Business Insights",
+    category: "bi_quality",
+    href: "/business-insights",
+    icon: TrendingUp,
+    badge: "Strategic",
+    desc: "Strategic KPI scorecards, root-cause diagnostic trees, and prioritized action roadmaps.",
+    color: "from-emerald-500/20 to-blue-500/20 text-emerald-400",
+  },
+  {
+    name: "Report Center",
+    category: "bi_quality",
+    href: "/reports",
+    icon: FileText,
+    badge: "Markdown/HTML",
+    desc: "Automated executive briefings, DORA velocity assessments, and PDF/MD exports.",
+    color: "from-blue-500/20 to-slate-500/20 text-blue-400",
+  },
+  {
+    name: "Data Upload Center",
+    category: "analytics",
+    href: "/upload",
+    icon: Sparkles,
+    badge: "Ingestion",
+    desc: "Multi-file CSV/XLSX/JSON drag-and-drop ingestion with schema profiling.",
+    color: "from-cyan-500/20 to-indigo-500/20 text-cyan-400",
+  },
+];
+
 export default function OverviewPage() {
+  const { datasets, selectedDatasetId, setSelectedDatasetId } = useDataset();
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState("all");
 
   useEffect(() => {
     async function load() {
@@ -50,53 +240,115 @@ export default function OverviewPage() {
 
   if (loading) {
     return (
-      <div className="flex h-96 items-center justify-center text-muted-foreground text-sm font-medium">
-        <Activity className="h-6 w-6 animate-spin text-primary mr-2" />
-        Loading Executive Dashboard...
+      <div className="flex h-96 flex-col items-center justify-center text-muted-foreground text-sm font-medium gap-3">
+        <div className="relative">
+          <div className="h-10 w-10 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+          <Activity className="h-5 w-5 text-primary absolute inset-0 m-auto animate-pulse" />
+        </div>
+        <p className="animate-pulse-slow">Synthesizing DevPulse Platform Telemetry...</p>
       </div>
     );
   }
 
   const dora = data?.dora_metrics || {};
 
+  const filteredFeatures =
+    activeCategory === "all"
+      ? PLATFORM_FEATURES
+      : PLATFORM_FEATURES.filter((f) => f.category === activeCategory);
+
   return (
-    <div className="space-y-6 max-w-7xl mx-auto">
-      {/* Top Banner: DORA & Executive Pulse */}
-      <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-background to-accent/20 p-6 shadow-sm">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-primary text-primary-foreground uppercase tracking-wider">
-                {data?.dora_tier || "High Performer"}
+    <div className="space-y-8 max-w-7xl mx-auto pb-10">
+      {/* Hero Banner: Glassmorphic Ambient Canvas */}
+      <div className="relative rounded-3xl border border-primary/20 bg-gradient-to-br from-card via-card/90 to-primary/5 p-6 sm:p-8 shadow-xl overflow-hidden">
+        {/* Glow Spheres */}
+        <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-primary/20 text-primary border border-primary/30 uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-ping" />
+                {data?.dora_tier || "High Performer"} Tier
               </span>
-              <span className="text-xs text-muted-foreground font-medium">DORA Velocity Index: <strong>{data?.dora_score || 84.2}/100</strong></span>
+              <span className="text-xs text-muted-foreground font-mono">
+                DORA Velocity Index: <strong className="text-foreground">{data?.dora_score || 84.2} / 100</strong>
+              </span>
             </div>
-            <h1 className="text-2xl font-bold tracking-tight text-foreground">
-              Engineering Intelligence & Quality Overview
+
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
+              Engineering Productivity &amp; Quality Intelligence
             </h1>
-            <p className="text-xs text-muted-foreground mt-1 max-w-3xl leading-relaxed">
+
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-3xl leading-relaxed">
               {data?.executive_summary ||
-                "DORA velocity benchmarks confirm high engineering delivery cadence with lead times averaging 18.5 hours. Automated quality gates and bottleneck diagnostics are tracking below."}
+                "DORA velocity benchmarks confirm high engineering delivery cadence with lead times averaging 18.5 hours. Automated quality gates and workflow bottlenecks are tracked below."}
             </p>
+
+            {/* Quick Dataset Switcher Pills */}
+            <div className="pt-2">
+              <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider block mb-1.5">
+                Quick Dataset Switcher:
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {datasets.map((ds) => {
+                  const active = ds.id === selectedDatasetId;
+                  return (
+                    <button
+                      key={ds.id}
+                      onClick={() => setSelectedDatasetId(ds.id)}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center gap-1.5 border ${
+                        active
+                          ? "bg-primary text-primary-foreground border-primary shadow-md scale-105"
+                          : "bg-card/70 hover:bg-muted text-muted-foreground hover:text-foreground border-border/60"
+                      }`}
+                    >
+                      <Database className="h-3 w-3" />
+                      <span>{ds.name}</span>
+                      <span className="text-[10px] opacity-75 font-mono">({ds.row_count}r)</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="text-right">
-              <span className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Health Score</span>
-              <div className="text-3xl font-black text-primary">{data?.overall_health_score || 85.0}%</div>
+          {/* Health Gauge Box */}
+          <div className="glass-card rounded-2xl p-5 border border-primary/20 flex flex-col items-center justify-center text-center shrink-0 min-w-[200px]">
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
+              Composite Health Score
+            </span>
+            <div className="my-1.5 text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
+              {data?.overall_health_score || 85.0}%
             </div>
+            <div className="w-full bg-muted/60 h-2 rounded-full overflow-hidden mt-2">
+              <div
+                className="h-full bg-gradient-to-r from-primary to-cyan-400 transition-all duration-1000 ease-out"
+                style={{ width: `${data?.overall_health_score || 85.0}%` }}
+              />
+            </div>
+            <span className="text-[10px] text-emerald-400 font-semibold mt-2 flex items-center gap-1">
+              <CheckCircle2 className="h-3 w-3" /> All Gates Operational
+            </span>
           </div>
         </div>
       </div>
 
-      {/* DORA 4 Core Metrics Section */}
-      <div>
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-            <Rocket className="h-4 w-4 text-primary" />
-            Verified DORA Metrics (Audit-Backed)
-          </h2>
-          <span className="text-[11px] text-muted-foreground">Calibrated against verified deployment logs</span>
+      {/* DORA 4 Core Metrics Section with Interactive Visual Cards */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="h-7 w-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+              <Rocket className="h-4 w-4" />
+            </div>
+            <h2 className="text-sm font-bold uppercase tracking-wider text-foreground">
+              DORA Core Velocity Metrics (Audit-Backed)
+            </h2>
+          </div>
+          <span className="text-[11px] text-muted-foreground font-mono hidden sm:inline">
+            Commit counts excluded from individual productivity scoring
+          </span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -106,7 +358,8 @@ export default function OverviewPage() {
             unit={dora.deployment_frequency?.unit || "deploys / day"}
             status={dora.deployment_frequency?.rating?.toUpperCase() || "HEALTHY"}
             change={12.5}
-            description="Daily continuous delivery cadence"
+            progressPct={80}
+            description="Daily release cadence to production"
           />
           <KPICard
             title="Lead Time for Changes"
@@ -114,6 +367,7 @@ export default function OverviewPage() {
             unit={dora.lead_time_for_changes?.unit || "hours"}
             status={dora.lead_time_for_changes?.rating?.toUpperCase() || "HEALTHY"}
             change={-15.4}
+            progressPct={72}
             description="Median elapsed commit to live deploy"
           />
           <KPICard
@@ -123,7 +377,8 @@ export default function OverviewPage() {
             status={dora.change_failure_rate?.rating === "Elite" ? "HEALTHY" : "WARNING"}
             change={8.2}
             target="< 5.0%"
-            description="Incidents requiring rollback or hotfix"
+            progressPct={85}
+            description="Proportion requiring rollback or fix"
           />
           <KPICard
             title="Time to Restore (MTTR)"
@@ -132,76 +387,108 @@ export default function OverviewPage() {
             status={dora.time_to_restore_service?.rating === "Elite" ? "HEALTHY" : "WARNING"}
             change={-6.5}
             target="< 2.0h"
-            description="Mean time to remediate failure"
+            progressPct={65}
+            description="Mean recovery duration after incident"
           />
         </div>
       </div>
 
-      {/* Trend Visualizations & Bottlenecks */}
+      {/* Visual Analytics & Bottlenecks Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Trend Chart (2 Cols) */}
-        <div className="lg:col-span-2 rounded-xl border border-border bg-card p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
+        {/* Animated Trajectory Chart (2 Cols) */}
+        <div className="lg:col-span-2 glass-card rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/50 pb-3">
             <div>
-              <h3 className="text-sm font-bold text-foreground">Lead Time vs Review Turnaround Trend</h3>
-              <p className="text-xs text-muted-foreground">5-week trajectory showing PR velocity improvements</p>
+              <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-primary" /> Weekly PR Lead Time vs Review Wait Trajectory
+              </h3>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                5-week moving average showing review wait contraction across microservices
+              </p>
             </div>
             <div className="flex items-center gap-3 text-xs">
-              <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-primary" /> Lead Time (h)</span>
-              <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-emerald-500" /> Review Turnaround (h)</span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="h-2.5 w-2.5 rounded-full bg-primary animate-pulse" /> Lead Time (h)
+              </span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" /> Review Turnaround (h)
+              </span>
             </div>
           </div>
-          <div className="h-64 w-full">
+
+          <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={data?.quality_trend || []} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="leadTimeGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
+                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.45} />
                     <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.0} />
                   </linearGradient>
                   <linearGradient id="reviewGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.4} />
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.45} />
                     <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
+                <CartesianGrid strokeDasharray="3 3" opacity={0.12} />
                 <XAxis dataKey="week" stroke="#888888" fontSize={11} tickLine={false} />
                 <YAxis stroke="#888888" fontSize={11} tickLine={false} />
                 <Tooltip
                   contentStyle={{
                     backgroundColor: "hsl(var(--card))",
                     borderColor: "hsl(var(--border))",
-                    borderRadius: "8px",
+                    borderRadius: "12px",
+                    boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
                     fontSize: "12px",
                   }}
                 />
-                <Area type="monotone" dataKey="lead_time" stroke="hsl(var(--primary))" strokeWidth={2} fillOpacity={1} fill="url(#leadTimeGrad)" name="Lead Time (h)" />
-                <Area type="monotone" dataKey="review_hours" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#reviewGrad)" name="Review Wait (h)" />
+                <Area
+                  type="monotone"
+                  dataKey="lead_time"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth={2.5}
+                  fillOpacity={1}
+                  fill="url(#leadTimeGrad)"
+                  name="Lead Time (h)"
+                />
+                <Area
+                  type="monotone"
+                  dataKey="review_hours"
+                  stroke="#10b981"
+                  strokeWidth={2}
+                  fillOpacity={1}
+                  fill="url(#reviewGrad)"
+                  name="Review Wait (h)"
+                />
               </AreaChart>
             </ResponsiveContainer>
           </div>
         </div>
 
         {/* Bottleneck Alerts (1 Col) */}
-        <div className="rounded-xl border border-border bg-card p-5 shadow-sm flex flex-col justify-between">
+        <div className="glass-card rounded-2xl p-5 shadow-sm space-y-4 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between border-b border-border/50 pb-3">
               <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
-                <AlertTriangle className="h-4 w-4 text-amber-500" />
+                <AlertTriangle className="h-4 w-4 text-amber-400 animate-bounce" />
                 Active Workflow Bottlenecks
               </h3>
-              <span className="text-[10px] font-semibold text-amber-500 px-2 py-0.5 rounded-full bg-amber-500/10">Priority Focus</span>
+              <span className="text-[10px] font-bold text-amber-400 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Priority Focus
+              </span>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-3 mt-3">
               {(data?.bottlenecks || []).map((b: any, idx: number) => (
-                <div key={idx} className="rounded-lg border border-border p-3 bg-muted/30 text-xs">
-                  <div className="flex items-center justify-between font-semibold text-foreground mb-1">
+                <div
+                  key={idx}
+                  className="rounded-xl border border-border/80 p-3.5 bg-muted/30 hover:border-amber-500/40 transition-colors text-xs space-y-1.5"
+                >
+                  <div className="flex items-center justify-between font-bold text-foreground">
                     <span>{b.type}</span>
-                    <span className="text-[10px] text-amber-600 dark:text-amber-400 font-bold">{b.severity}</span>
+                    <span className="text-[10px] text-amber-400 uppercase font-mono">{b.severity}</span>
                   </div>
-                  <p className="text-muted-foreground text-[11px] mb-2">{b.impact}</p>
-                  <div className="text-[11px] text-primary font-medium bg-primary/10 p-1.5 rounded">
+                  <p className="text-muted-foreground text-[11px] leading-relaxed">{b.impact}</p>
+                  <div className="text-[11px] text-primary font-medium bg-primary/10 p-2 rounded-lg border border-primary/20">
                     <strong>Action:</strong> {b.recommendation}
                   </div>
                 </div>
@@ -211,42 +498,79 @@ export default function OverviewPage() {
 
           <Link
             href="/github-analytics"
-            className="mt-4 flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+            className="mt-4 flex items-center justify-center gap-2 py-2 px-4 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary text-xs font-semibold transition-colors"
           >
-            Explore Full Engineering Analytics <ArrowRight className="h-3.5 w-3.5" />
+            Inspect GitHub PR Intelligence <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </div>
 
-      {/* Quick Launchpad to Analytical Studios */}
-      <div>
-        <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
-          Interactive Analytical Suites
-        </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          {[
-            { name: "SQL Studio", href: "/sql", icon: Database, desc: "Safe queries & plans" },
-            { name: "Excel Studio", href: "/excel", icon: FileSpreadsheet, desc: "Pivots & formulas" },
-            { name: "Python Lab", href: "/python", icon: Code2, desc: "Pandas & transforms" },
-            { name: "EDA Workspace", href: "/eda", icon: TrendingUp, desc: "Distributions & heatmaps" },
-            { name: "Predictive ML", href: "/predictive", icon: Brain, desc: "Regression & models" },
-            { name: "Quality Center", href: "/quality", icon: ShieldCheck, desc: "Audit scorecards" },
-          ].map((tool) => {
-            const Icon = tool.icon;
+      {/* Feature Explorer Showcase Hub (All 19 Modules) */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/60 pb-3">
+          <div>
+            <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
+              <Zap className="h-5 w-5 text-amber-400" /> Platform Capability Explorer
+            </h2>
+            <p className="text-xs text-muted-foreground">
+              Launch into any of the 19 practical functional analytics and engineering intelligence suites
+            </p>
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap gap-1.5 text-xs">
+            {FEATURE_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-3 py-1 rounded-lg font-semibold transition-all ${
+                  activeCategory === cat.id
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "bg-muted/50 text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Dynamic Feature Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {filteredFeatures.map((feat) => {
+            const Icon = feat.icon;
             return (
               <Link
-                key={tool.name}
-                href={tool.href}
-                className="group rounded-xl border border-border bg-card p-3.5 hover:border-primary/50 hover:shadow-md transition-all flex flex-col justify-between"
+                key={feat.name}
+                href={feat.href}
+                className="glass-card rounded-2xl p-4 flex flex-col justify-between group hover:border-primary/50 relative overflow-hidden"
               >
-                <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <Icon className="h-4 w-4" />
-                </div>
+                {/* Ambient glow accent on card hover */}
+                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-2xl -z-10 from-primary/5 to-transparent" />
+
                 <div>
-                  <div className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">
-                    {tool.name}
+                  <div className="flex items-center justify-between mb-3">
+                    <div
+                      className={`h-10 w-10 rounded-xl bg-gradient-to-br ${feat.color} flex items-center justify-center transition-transform group-hover:scale-110 shadow-sm`}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-muted text-foreground border border-border/60">
+                      {feat.badge}
+                    </span>
                   </div>
-                  <div className="text-[10px] text-muted-foreground">{tool.desc}</div>
+
+                  <h3 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors mb-1">
+                    {feat.name}
+                  </h3>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed line-clamp-2">
+                    {feat.desc}
+                  </p>
+                </div>
+
+                <div className="pt-3 mt-3 border-t border-border/40 flex items-center justify-between text-[11px] font-semibold text-primary">
+                  <span>Open Studio</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
             );

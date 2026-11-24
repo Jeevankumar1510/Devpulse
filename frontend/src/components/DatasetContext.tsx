@@ -114,7 +114,7 @@ const DatasetContext = createContext<DatasetContextType>({
   selectedDatasetId: "demo-eng-productivity",
   setSelectedDatasetId: () => {},
   isLoading: false,
-  isBackendConnected: true,
+  isBackendConnected: false,
   refreshDatasets: async () => {},
 });
 
@@ -122,7 +122,7 @@ export function DatasetProvider({ children }: { children: React.ReactNode }) {
   const [datasets, setDatasets] = useState<DatasetItem[]>(FALLBACK_DATASETS);
   const [selectedDatasetId, setSelectedDatasetId] = useState<string>("demo-eng-productivity");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isBackendConnected, setIsBackendConnected] = useState<boolean>(true);
+  const [isBackendConnected, setIsBackendConnected] = useState<boolean>(false);
 
   const refreshDatasets = async () => {
     setIsLoading(true);

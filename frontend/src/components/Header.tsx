@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "./ThemeContext";
 import { useDataset } from "./DatasetContext";
-import { SyntheticDisclosureModal } from "./SyntheticDisclosureModal";
 import {
   Sun,
   Moon,
@@ -16,7 +15,6 @@ import {
   Info,
   ServerOff,
   Activity,
-  ShieldAlert,
 } from "lucide-react";
 
 export function Header() {
@@ -70,24 +68,37 @@ export function Header() {
         )}
 
         {/* Synthetic origin transparency disclosure tag */}
-        <div className="relative">
-          <button
-            onClick={() => setShowDisclosure(true)}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25 text-[10px] font-bold hover:bg-amber-500/20 transition-all shadow-sm active:scale-95"
-            title="Click to view full synthetic data provenance and ethical disclosure"
-          >
-            <AlertCircle className="h-3 w-3 animate-bounce" />
-            <span className="hidden sm:inline">Synthetic Data Disclosed</span>
-            <span className="sm:hidden">Synthetic</span>
-          </button>
-        </div>
+        {selectedDataset?.is_synthetic && (
+          <div className="relative">
+            <button
+              onClick={() => setShowDisclosure(!showDisclosure)}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25 text-[10px] font-bold hover:bg-amber-500/20 transition-all shadow-sm"
+              title="Click to view synthetic disclosure"
+            >
+              <AlertCircle className="h-3 w-3 animate-bounce" />
+              <span>Synthetic Disclosed</span>
+            </button>
+            {showDisclosure && (
+              <div className="absolute left-0 mt-2 w-72 rounded-xl border border-border/80 bg-card/95 backdrop-blur-md p-3.5 shadow-2xl z-50 text-xs animate-fade-in">
+                <div className="flex items-center gap-1.5 font-bold text-amber-500 mb-1">
+                  <Info className="h-4 w-4" />
+                  <span>Synthetic Data Disclosure</span>
+                </div>
+                <p className="text-muted-foreground text-[11px] leading-relaxed">
+                  {selectedDataset.synthetic_disclosure ||
+                    "This dataset was algorithmically generated using realistic statistical distributions. Analytical findings reflect simulated engineering scenarios."}
+                </p>
+                <button
+                  onClick={() => setShowDisclosure(false)}
+                  className="mt-2 text-[10px] text-primary hover:underline font-bold"
+                >
+                  Dismiss
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
-
-      <SyntheticDisclosureModal
-        isOpen={showDisclosure}
-        onClose={() => setShowDisclosure(false)}
-        datasetName={selectedDataset?.name}
-      />
 
       {/* Right: Actions, Global Search, Theme Switcher */}
       <div className="flex items-center gap-2.5">

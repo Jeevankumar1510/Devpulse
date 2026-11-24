@@ -223,6 +223,12 @@ export default function OverviewPage() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [featureSearch, setFeatureSearch] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     async function load() {
@@ -252,10 +258,15 @@ export default function OverviewPage() {
 
   const dora = data?.dora_metrics || {};
 
-  const filteredFeatures =
-    activeCategory === "all"
-      ? PLATFORM_FEATURES
-      : PLATFORM_FEATURES.filter((f) => f.category === activeCategory);
+  const filteredFeatures = PLATFORM_FEATURES.filter((f) => {
+    const matchesCat = activeCategory === "all" || f.category === activeCategory;
+    const matchesSearch =
+      featureSearch.trim() === "" ||
+      f.name.toLowerCase().includes(featureSearch.toLowerCase()) ||
+      f.desc.toLowerCase().includes(featureSearch.toLowerCase()) ||
+      f.badge.toLowerCase().includes(featureSearch.toLowerCase());
+    return matchesCat && matchesSearch;
+  });
 
   return (
     <div className="space-y-8 max-w-7xl mx-auto pb-10">
@@ -417,50 +428,52 @@ export default function OverviewPage() {
           </div>
 
           <div className="h-72 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={data?.quality_trend || []} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="leadTimeGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.45} />
-                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.0} />
-                  </linearGradient>
-                  <linearGradient id="reviewGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.45} />
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" opacity={0.12} />
-                <XAxis dataKey="week" stroke="#888888" fontSize={11} tickLine={false} />
-                <YAxis stroke="#888888" fontSize={11} tickLine={false} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "hsl(var(--card))",
-                    borderColor: "hsl(var(--border))",
-                    borderRadius: "12px",
-                    boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
-                    fontSize: "12px",
-                  }}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="lead_time"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth={2.5}
-                  fillOpacity={1}
-                  fill="url(#leadTimeGrad)"
-                  name="Lead Time (h)"
-                />
-                <Area
-                  type="monotone"
-                  dataKey="review_hours"
-                  stroke="#10b981"
-                  strokeWidth={2}
-                  fillOpacity={1}
-                  fill="url(#reviewGrad)"
-                  name="Review Wait (h)"
-                />
-              </AreaChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data?.quality_trend || []} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="leadTimeGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.45} />
+                      <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.0} />
+                    </linearGradient>
+                    <linearGradient id="reviewGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#10b981" stopOpacity={0.45} />
+                      <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" opacity={0.12} />
+                  <XAxis dataKey="week" stroke="#888888" fontSize={11} tickLine={false} />
+                  <YAxis stroke="#888888" fontSize={11} tickLine={false} />
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: "hsl(var(--card))",
+                      borderColor: "hsl(var(--border))",
+                      borderRadius: "12px",
+                      boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
+                      fontSize: "12px",
+                    }}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="lead_time"
+                    stroke="hsl(var(--primary))"
+                    strokeWidth={2.5}
+                    fillOpacity={1}
+                    fill="url(#leadTimeGrad)"
+                    name="Lead Time (h)"
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="review_hours"
+                    stroke="#10b981"
+                    strokeWidth={2}
+                    fillOpacity={1}
+                    fill="url(#reviewGrad)"
+                    name="Review Wait (h)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            )}
           </div>
         </div>
 
@@ -505,6 +518,45 @@ export default function OverviewPage() {
         </div>
       </div>
 
+      {/* Data Analytics Skill Progression Track (Beginner to Advanced) */}
+      <div className="glass-card rounded-2xl p-5 border border-primary/20 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/50 pb-2">
+          <div className="flex items-center gap-2">
+            <Sparkles className="h-4 w-4 text-primary animate-pulse" />
+            <h3 className="text-xs font-bold uppercase tracking-wider text-foreground">
+              End-to-End Data Analytics Mastery Track
+            </h3>
+          </div>
+          <span className="text-[11px] text-muted-foreground font-mono">
+            Full-stack competency pipeline from ingestion to executive BI
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 text-center">
+          {[
+            { step: "01", name: "Excel & CSV", sub: "Pivots & Formulas", href: "/excel", color: "border-emerald-500/30 bg-emerald-500/5 text-emerald-400" },
+            { step: "02", name: "SQL Studio", sub: "CTEs & Window Fns", href: "/sql", color: "border-blue-500/30 bg-blue-500/5 text-blue-400" },
+            { step: "03", name: "Cleaning", sub: "IQR & Imputation", href: "/cleaning", color: "border-purple-500/30 bg-purple-500/5 text-purple-400" },
+            { step: "04", name: "EDA & Moments", sub: "Distributions & Heatmaps", href: "/eda", color: "border-cyan-500/30 bg-cyan-500/5 text-cyan-400" },
+            { step: "05", name: "Hypothesis & A/B", sub: "Welch t, ANOVA, Chi²", href: "/statistics", color: "border-rose-500/30 bg-rose-500/5 text-rose-400" },
+            { step: "06", name: "Predictive ML", sub: "Scikit-Learn & Anomalies", href: "/predictive", color: "border-violet-500/30 bg-violet-500/5 text-violet-400" },
+            { step: "07", name: "Power BI & BI", sub: "Star Schema & DAX", href: "/powerbi", color: "border-amber-500/30 bg-amber-500/5 text-amber-400" },
+          ].map((item) => (
+            <Link
+              key={item.step}
+              href={item.href}
+              className={`rounded-xl border p-2.5 flex flex-col justify-between hover:scale-105 transition-all shadow-sm group ${item.color}`}
+            >
+              <div className="text-[10px] font-mono font-bold opacity-75">{item.step}</div>
+              <div className="text-xs font-bold text-foreground group-hover:text-primary transition-colors my-1">
+                {item.name}
+              </div>
+              <div className="text-[10px] text-muted-foreground truncate font-medium">{item.sub}</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* Feature Explorer Showcase Hub (All 19 Modules) */}
       <div className="space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/60 pb-3">
@@ -517,21 +569,30 @@ export default function OverviewPage() {
             </p>
           </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap gap-1.5 text-xs">
-            {FEATURE_CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-3 py-1 rounded-lg font-semibold transition-all ${
-                  activeCategory === cat.id
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "bg-muted/50 text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {cat.name}
-              </button>
-            ))}
+          {/* Search Box & Category Filter Pills */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 text-xs">
+            <input
+              type="text"
+              value={featureSearch}
+              onChange={(e) => setFeatureSearch(e.target.value)}
+              placeholder="Filter 19 modules..."
+              className="h-8 rounded-lg border border-input bg-background/80 px-3 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+            />
+            <div className="flex flex-wrap gap-1">
+              {FEATURE_CATEGORIES.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-2.5 py-1 rounded-lg font-semibold transition-all ${
+                    activeCategory === cat.id
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "bg-muted/50 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

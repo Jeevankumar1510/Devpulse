@@ -31,6 +31,11 @@ import {
 export default function VisualizationStudioPage() {
   const { selectedDatasetId, selectedDataset } = useDataset();
   const [chartType, setChartType] = useState<"histogram" | "bar" | "line" | "scatter" | "boxplot">("bar");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Chart configuration parameters
   const [selectedCol, setSelectedCol] = useState("");
@@ -235,7 +240,7 @@ export default function VisualizationStudioPage() {
             <div className="flex h-full items-center justify-center text-muted-foreground text-xs">
               No data points available for the chosen parameters.
             </div>
-          ) : (
+          ) : mounted ? (
             <ResponsiveContainer width="100%" height="100%">
               {chartType === "bar" ? (
                 <BarChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 20 }}>
@@ -318,7 +323,7 @@ export default function VisualizationStudioPage() {
                 </BarChart>
               )}
             </ResponsiveContainer>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

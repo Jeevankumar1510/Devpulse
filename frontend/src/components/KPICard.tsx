@@ -27,7 +27,9 @@ export function KPICard({
   className,
   progressPct,
 }: KPICardProps) {
-  const statusStyles = {
+  const safeStatus = (status ? String(status) : "HEALTHY").toUpperCase();
+
+  const statusMap: Record<string, { badge: string; glow: string; dot: string; bar: string }> = {
     HEALTHY: {
       badge: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
       glow: "hover:shadow-[0_0_25px_-5px_rgba(16,185,129,0.25)]",
@@ -46,7 +48,9 @@ export function KPICard({
       dot: "bg-rose-500",
       bar: "bg-rose-500",
     },
-  }[status.toUpperCase()] || {
+  };
+
+  const statusStyles = statusMap[safeStatus] || {
     badge: "text-primary bg-primary/10 border-primary/20",
     glow: "hover:shadow-[0_0_25px_-5px_rgba(59,130,246,0.25)]",
     dot: "bg-primary",
@@ -74,14 +78,14 @@ export function KPICard({
           )}
         >
           <span className={cn("h-1.5 w-1.5 rounded-full animate-ping", statusStyles.dot)} />
-          {status}
+          {safeStatus}
         </span>
       </div>
 
       {/* Main Metric Value */}
       <div className="my-2.5 flex items-baseline gap-1.5 relative z-10">
         <span className="text-3xl font-extrabold tracking-tight text-foreground group-hover:text-primary transition-colors">
-          {value}
+          {value !== undefined && value !== null ? value : "—"}
         </span>
         {unit && <span className="text-xs text-muted-foreground font-semibold">{unit}</span>}
       </div>

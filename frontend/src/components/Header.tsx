@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "./ThemeContext";
 import { useDataset } from "./DatasetContext";
+import { SyntheticDisclosureModal } from "./SyntheticDisclosureModal";
 import {
   Sun,
   Moon,
@@ -13,13 +14,14 @@ import {
   AlertCircle,
   RefreshCw,
   Info,
-  Radio,
-  Zap,
+  ServerOff,
+  Activity,
+  ShieldAlert,
 } from "lucide-react";
 
 export function Header() {
-  const { theme, toggleTheme } = useTheme();
-  const { datasets, selectedDatasetId, setSelectedDatasetId, selectedDataset, refreshDatasets, isLoading } = useDataset();
+  const { theme, toggleTheme, mounted } = useTheme();
+  const { datasets, selectedDatasetId, setSelectedDatasetId, selectedDataset, refreshDatasets, isLoading, isBackendConnected } = useDataset();
   const [showDisclosure, setShowDisclosure] = useState(false);
 
   return (
@@ -51,47 +53,41 @@ export function Header() {
           <RefreshCw className={`h-3.5 w-3.5 ${isLoading ? "animate-spin" : ""}`} />
         </button>
 
-        {/* Live Telemetry Ping Pill */}
-        <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span>Telemetry Active</span>
-        </div>
-
-        {/* Synthetic origin transparency disclosure tag */}
-        {selectedDataset?.is_synthetic && (
-          <div className="relative">
-            <button
-              onClick={() => setShowDisclosure(!showDisclosure)}
-              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25 text-[10px] font-bold hover:bg-amber-500/20 transition-all shadow-sm"
-              title="Click to view synthetic disclosure"
-            >
-              <AlertCircle className="h-3 w-3 animate-bounce" />
-              <span>Synthetic Disclosed</span>
-            </button>
-            {showDisclosure && (
-              <div className="absolute left-0 mt-2 w-72 rounded-xl border border-border/80 bg-card/95 backdrop-blur-md p-3.5 shadow-2xl z-50 text-xs animate-fade-in">
-                <div className="flex items-center gap-1.5 font-bold text-amber-500 mb-1">
-                  <Info className="h-4 w-4" />
-                  <span>Synthetic Data Disclosure</span>
-                </div>
-                <p className="text-muted-foreground text-[11px] leading-relaxed">
-                  {selectedDataset.synthetic_disclosure ||
-                    "This dataset was algorithmically generated using realistic statistical distributions. Analytical findings reflect simulated engineering scenarios."}
-                </p>
-                <button
-                  onClick={() => setShowDisclosure(false)}
-                  className="mt-2 text-[10px] text-primary hover:underline font-bold"
-                >
-                  Dismiss
-                </button>
-              </div>
-            )}
+        {/* Backend Connection Indicator */}
+        {isBackendConnected ? (
+          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>API Online</span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold">
+            <ServerOff className="h-3 w-3" />
+            <span className="hidden sm:inline">Offline (Start backend on :8000)</span>
           </div>
         )}
+
+        {/* Synthetic origin transparency disclosure tag */}
+        <div className="relative">
+          <button
+            onClick={() => setShowDisclosure(true)}
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25 text-[10px] font-bold hover:bg-amber-500/20 transition-all shadow-sm active:scale-95"
+            title="Click to view full synthetic data provenance and ethical disclosure"
+          >
+            <AlertCircle className="h-3 w-3 animate-bounce" />
+            <span className="hidden sm:inline">Synthetic Data Disclosed</span>
+            <span className="sm:hidden">Synthetic</span>
+          </button>
+        </div>
       </div>
+
+      <SyntheticDisclosureModal
+        isOpen={showDisclosure}
+        onClose={() => setShowDisclosure(false)}
+        datasetName={selectedDataset?.name}
+      />
 
       {/* Right: Actions, Global Search, Theme Switcher */}
       <div className="flex items-center gap-2.5">
@@ -114,13 +110,15 @@ export function Header() {
           <span className="hidden sm:inline">Upload</span>
         </Link>
 
-        {/* Theme Toggle */}
+        {/* Theme Toggle (Client mounted safe) */}
         <button
           onClick={toggleTheme}
-          title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          title={mounted ? `Switch to ${theme === "dark" ? "light" : "dark"} mode` : "Toggle Theme"}
           className="h-8 w-8 rounded-lg border border-input bg-background/80 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-all active:scale-90"
         >
-          {theme === "dark" ? (
+          {!mounted ? (
+            <div className="h-4 w-4" />
+          ) : theme === "dark" ? (
             <Sun className="h-4 w-4 text-amber-400 transition-transform rotate-0 hover:rotate-90 duration-300" />
           ) : (
             <Moon className="h-4 w-4 text-slate-700 transition-transform -rotate-12 hover:rotate-0 duration-300" />

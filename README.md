@@ -73,51 +73,93 @@ DevPulse demonstrates the complete Data Analyst, Analytics Engineer, and BI Deve
 
 ## 🚀 Quickstart & Installation
 
-### Prerequisites
-- Python 3.10+
-- Node.js 18+ and npm
+## 🚀 How to Run DevPulse
 
-### 1. Clone & Setup Workspace
+### Prerequisites
+- **Python**: 3.10, 3.11, or 3.12 (`python --version`)
+- **Node.js**: v18+ (`node --version`) and **npm** (`npm --version`)
+- **Git**
+
+---
+
+### Option A: Quickstart (Single-Command Dual Launcher)
+The easiest way to start both backend (port 8000) and frontend (port 3000) concurrently:
+
 ```bash
-git clone <repo-url> DEVPULSE
-cd DEVPULSE
+# In project root: c:\Users\Jeeva\Documents\DEVPULSE
+python start_devpulse.py
 ```
 
-### 2. Backend Setup
-```bash
-# Navigate to backend
+Once launched:
+- 🌐 **Frontend Application**: [http://localhost:3000](http://localhost:3000)
+- ⚙️ **FastAPI Interactive Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- 📊 **API Root Health**: [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
+
+Press `Ctrl+C` in the terminal to terminate both servers cleanly.
+
+---
+
+### Option B: Manual Individual Service Start
+
+#### 1. Backend Server (FastAPI + DuckDB)
+```powershell
+# Open Terminal 1
 cd backend
 
-# Install dependencies
-pip install fastapi uvicorn sqlalchemy pandas numpy scipy scikit-learn statsmodels openpyxl duckdb pydantic-settings python-multipart pytest httpx
+# Install dependencies (first-time only)
+pip install -r requirements.txt
 
-# Run test suite
-pytest tests/test_analytics.py -v
+# Run analytical test suite (14 passing tests, 0 warnings)
+pytest -v
 
-# Start FastAPI Server (runs on http://localhost:8000)
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+# Start FastAPI server with live reload on port 8000
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### 3. Frontend Setup
-```bash
-# Navigate to frontend (in a new terminal)
+#### 2. Frontend Application (Next.js 14 App Router + Tailwind CSS)
+```powershell
+# Open Terminal 2
 cd frontend
 
-# Install npm dependencies
+# Install Node dependencies (first-time only)
 npm install
 
-# Run Next.js production build check
+# Optional: Verify production build (22 static routes, 0 errors)
 npm run build
 
-# Start Next.js Development Server (runs on http://localhost:3000)
+# Start Next.js development server on port 3000
 npm run dev
 ```
 
-### 4. Single-Command Launch (Both Backend and Frontend)
-```bash
-python start_devpulse.py
-```
-Open **http://localhost:3000** in your browser.
+---
+
+## 🔒 Synthetic Data Closure & Ethical Measurement Policy
+
+### 1. Transparent Synthetic Data Disclosure
+DevPulse is committed to the highest standards of data honesty and analytical transparency. To protect enterprise proprietary source code and developer privacy while demonstrating the full spectrum of data analysis, DevPulse preloads **4 mathematically modeled synthetic datasets**:
+
+1. **`engineering_productivity.csv` (400 PR records)**: Pull request review turnaround times, commit-to-merge lead times, lines modified, and code review comment frequency. Modeled using empirical log-normal distributions mirroring high-performing SaaS engineering teams.
+2. **`ci_cd_deployments.csv` (180 release events)**: Production and staging deployment logs with commit SHAs, failure status flags, and incident restoration times (MTTR). Used exclusively for authentic DORA calculations.
+3. **`software_defects.csv` (250 defect tickets)**: Defect severity tiers (P1 to P4), architectural components (Auth, API, UI, DB, Billing), resolution velocity, and escape defect flags.
+4. **`enterprise_sales.csv` (500 transactions)**: Multi-department commercial dataset for validating cross-tabulation pivot tables, SQL CTEs, and supervised machine learning pipelines.
+
+> [!IMPORTANT]
+> **Synthetic Labeling**: Every seeded dataset is marked in database schemas and UI headers with `is_synthetic: true` and an amber **Synthetic Data Disclosed** badge. Clicking the badge opens the provenance modal explaining the generative distribution.
+
+---
+
+### 2. Strict DORA Measurement & Goodhart's Law Guardrail
+DevPulse enforces strict engineering productivity ethics:
+- **Commit Counts Are NOT Productivity Scores**: In adherence to **Goodhart's Law** (*"When a measure becomes a target, it ceases to be a good measure"*), individual commit counts, lines of code (LOC), and raw comment numbers are **never** aggregated into developer rankings or performance appraisals.
+- **Audit-Grade DORA Velocity**: DORA metrics (*Deployment Frequency, Lead Time for Changes, Change Failure Rate, Time to Restore Service*) are computed **strictly from authentic deployment audit logs (`ci_cd_deployments`)** containing verified release outcomes and recovery timestamps.
+
+---
+
+### 3. Transitioning from Synthetic to Authentic Production Data
+You can switch DevPulse to 100% authentic production data at any time:
+1. **GitHub REST API Stream**: Go to `/settings` and enter your GitHub Personal Access Token (PAT) and repository names. DevPulse will ingest live pull requests, reviews, and GitHub Actions workflow runs.
+2. **Enterprise PostgreSQL**: Set the `DATABASE_URL` environment variable (e.g. `postgresql://user:pass@host:5432/devpulse_db`) in `backend/.env`.
+3. **Custom CSV/Excel Uploads**: Use the `/upload` page to drag-and-drop your team's real issue trackers, sprint reports, or operational CSV/XLSX files. All analytical tools instantly adapt to the active schema.
 
 ---
 

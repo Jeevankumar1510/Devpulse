@@ -31,6 +31,11 @@ export default function GitHubAnalyticsPage() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [timeframe, setTimeframe] = useState("last_90_days");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     async function loadMetrics() {
@@ -142,23 +147,25 @@ export default function GitHubAnalyticsPage() {
             <span className="text-[10px] text-muted-foreground">5-Week Moving Average</span>
           </div>
           <div className="h-64 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={data?.quality_trend || []} margin={{ top: 10, right: 20, left: -20, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
-                <XAxis dataKey="week" stroke="#888888" fontSize={11} />
-                <YAxis stroke="#888888" fontSize={11} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "hsl(var(--card))",
-                    borderColor: "hsl(var(--border))",
-                    borderRadius: "8px",
-                    fontSize: "12px",
-                  }}
-                />
-                <Line type="monotone" dataKey="lead_time" stroke="hsl(var(--primary))" strokeWidth={2.5} dot={{ r: 4 }} name="Lead Time (h)" />
-                <Line type="monotone" dataKey="review_hours" stroke="#10b981" strokeWidth={2} dot={{ r: 3 }} name="Review Wait (h)" />
-              </LineChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data?.quality_trend || []} margin={{ top: 10, right: 20, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
+                  <XAxis dataKey="week" stroke="#888888" fontSize={11} />
+                  <YAxis stroke="#888888" fontSize={11} />
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: "hsl(var(--card))",
+                      borderColor: "hsl(var(--border))",
+                      borderRadius: "8px",
+                      fontSize: "12px",
+                    }}
+                  />
+                  <Line type="monotone" dataKey="lead_time" stroke="hsl(var(--primary))" strokeWidth={2.5} dot={{ r: 4 }} name="Lead Time (h)" />
+                  <Line type="monotone" dataKey="review_hours" stroke="#10b981" strokeWidth={2} dot={{ r: 3 }} name="Review Wait (h)" />
+                </LineChart>
+              </ResponsiveContainer>
+            )}
           </div>
         </div>
 

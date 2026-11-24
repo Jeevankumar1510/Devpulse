@@ -35,6 +35,11 @@ export default function PredictiveLabPage() {
   const [testSize, setTestSize] = useState<number>(0.2);
   const [training, setTraining] = useState<boolean>(false);
   const [result, setResult] = useState<any>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const columns = selectedDataset?.columns_metadata?.map((c: any) => c.name) || [];
   const numericCols = selectedDataset?.columns_metadata?.filter((c: any) =>
@@ -287,22 +292,24 @@ export default function PredictiveLabPage() {
                 <div className="rounded-xl border border-border bg-card p-5 shadow-sm space-y-3">
                   <h3 className="text-xs font-bold text-foreground">Feature Importance Ranking</h3>
                   <div className="h-56 w-full">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={result.feature_importance} layout="vertical" margin={{ left: 40, right: 20 }}>
-                        <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
-                        <XAxis type="number" stroke="#888888" fontSize={11} />
-                        <YAxis dataKey="feature" type="category" stroke="#888888" fontSize={10} width={100} />
-                        <Tooltip
-                          contentStyle={{
-                            backgroundColor: "hsl(var(--card))",
-                            borderColor: "hsl(var(--border))",
-                            borderRadius: "8px",
-                            fontSize: "12px",
-                          }}
-                        />
-                        <Bar dataKey="importance" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} name="Relative Importance" />
-                      </BarChart>
-                    </ResponsiveContainer>
+                    {mounted && (
+                      <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={result.feature_importance} layout="vertical" margin={{ left: 40, right: 20 }}>
+                          <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
+                          <XAxis type="number" stroke="#888888" fontSize={11} />
+                          <YAxis dataKey="feature" type="category" stroke="#888888" fontSize={10} width={100} />
+                          <Tooltip
+                            contentStyle={{
+                              backgroundColor: "hsl(var(--card))",
+                              borderColor: "hsl(var(--border))",
+                              borderRadius: "8px",
+                              fontSize: "12px",
+                            }}
+                          />
+                          <Bar dataKey="importance" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} name="Relative Importance" />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    )}
                   </div>
                 </div>
               )}

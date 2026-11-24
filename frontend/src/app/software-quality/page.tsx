@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { KPICard } from "@/components/KPICard";
+import { AmbientMesh } from "@/components/AmbientMesh";
 import {
   ShieldCheck,
   Bug,
@@ -83,7 +84,8 @@ export default function SoftwareQualityPage() {
   }
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto">
+    <div className="space-y-6 max-w-7xl mx-auto pb-10 relative">
+      <AmbientMesh />
       <div>
         <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
           <ShieldCheck className="h-5 w-5 text-emerald-500" />

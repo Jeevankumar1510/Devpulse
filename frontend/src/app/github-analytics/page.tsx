@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { KPICard } from "@/components/KPICard";
+import { AmbientMesh } from "@/components/AmbientMesh";
 import {
   GitPullRequest,
   Clock,
@@ -84,7 +85,8 @@ export default function GitHubAnalyticsPage() {
   const dora = data?.dora_metrics || {};
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto">
+    <div className="space-y-6 max-w-7xl mx-auto pb-10 relative">
+      <AmbientMesh />
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border pb-3">
         <div>
           <h1 className="text-xl font-bold text-foreground flex items-center gap-2">

@@ -4,6 +4,10 @@ import React, { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { useDataset } from "@/components/DatasetContext";
 import { KPICard } from "@/components/KPICard";
+import { AmbientMesh } from "@/components/AmbientMesh";
+import { FloatingNodes } from "@/components/FloatingNodes";
+import { AnimatedPipeline } from "@/components/AnimatedPipeline";
+import { RadarSweep } from "@/components/RadarSweep";
 import {
   Rocket,
   Clock,
@@ -40,8 +44,6 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  BarChart,
-  Bar,
   CartesianGrid,
 } from "recharts";
 
@@ -304,27 +306,37 @@ export default function OverviewPage() {
   });
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto pb-10">
-      {/* Hero Banner: Glassmorphic Ambient Canvas */}
-      <div className="relative rounded-3xl border border-primary/20 bg-gradient-to-br from-card via-card/90 to-primary/5 p-6 sm:p-8 shadow-xl overflow-hidden">
-        {/* Glow Spheres */}
-        <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="space-y-8 max-w-7xl mx-auto pb-10 relative">
+      {/* Background Animated Ambient Mesh */}
+      <AmbientMesh />
 
-        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div className="space-y-3">
+      {/* Hero Banner: Glassmorphic Ambient Canvas */}
+      <div className="relative rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card/90 to-primary/5 p-6 sm:p-8 shadow-2xl overflow-hidden">
+        {/* Animated Glow Spheres */}
+        <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/15 rounded-full blur-3xl pointer-events-none animate-float-slow" />
+        <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none animate-float-reverse" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          <div className="space-y-4 flex-1">
             <div className="flex flex-wrap items-center gap-2">
               <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-primary/20 text-primary border border-primary/30 uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-ping" />
+                <span className="h-2 w-2 rounded-full bg-cyan-400 animate-ping" />
                 {data?.dora_tier || "High Performer"} Tier
               </span>
               <span className="text-xs text-muted-foreground font-mono">
-                DORA Velocity Index: <strong className="text-foreground">{data?.dora_score || 84.2} / 100</strong>
+                DORA Velocity Index:{" "}
+                <strong className="text-foreground">{data?.dora_score || 84.2} / 100</strong>
+              </span>
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 flex items-center gap-1">
+                <CheckCircle2 className="h-3 w-3" /> Audit Verified
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
-              Engineering Productivity &amp; Quality Intelligence
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
+              Engineering Productivity &amp;{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-indigo-400">
+                Quality Intelligence
+              </span>
             </h1>
 
             <p className="text-xs sm:text-sm text-muted-foreground max-w-3xl leading-relaxed">
@@ -334,8 +346,8 @@ export default function OverviewPage() {
 
             {/* Quick Dataset Switcher Pills */}
             <div className="pt-2">
-              <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider block mb-1.5">
-                Quick Dataset Switcher:
+              <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider block mb-2">
+                Active Analytical Dataset:
               </span>
               <div className="flex flex-wrap gap-2">
                 {datasets.map((ds) => {
@@ -344,15 +356,15 @@ export default function OverviewPage() {
                     <button
                       key={ds.id}
                       onClick={() => setSelectedDatasetId(ds.id)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center gap-1.5 border ${
+                      className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 border ${
                         active
-                          ? "bg-primary text-primary-foreground border-primary shadow-md scale-105"
-                          : "bg-card/70 hover:bg-muted text-muted-foreground hover:text-foreground border-border/60"
+                          ? "bg-primary text-primary-foreground border-primary shadow-lg scale-105"
+                          : "bg-card/80 hover:bg-muted text-muted-foreground hover:text-foreground border-border/70"
                       }`}
                     >
-                      <Database className="h-3 w-3" />
+                      <Database className="h-3.5 w-3.5" />
                       <span>{ds.name}</span>
-                      <span className="text-[10px] opacity-75 font-mono">({ds.row_count}r)</span>
+                      <span className="text-[10px] opacity-80 font-mono">({ds.row_count} rows)</span>
                     </button>
                   );
                 })}
@@ -360,26 +372,31 @@ export default function OverviewPage() {
             </div>
           </div>
 
-          {/* Health Gauge Box */}
-          <div className="glass-card rounded-2xl p-5 border border-primary/20 flex flex-col items-center justify-center text-center shrink-0 min-w-[200px]">
-            <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold">
-              Composite Health Score
-            </span>
-            <div className="my-1.5 text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
-              {data?.overall_health_score || 85.0}%
-            </div>
-            <div className="w-full bg-muted/60 h-2 rounded-full overflow-hidden mt-2">
-              <div
-                className="h-full bg-gradient-to-r from-primary to-cyan-400 transition-all duration-1000 ease-out"
-                style={{ width: `${data?.overall_health_score || 85.0}%` }}
-              />
-            </div>
-            <span className="text-[10px] text-emerald-400 font-semibold mt-2 flex items-center gap-1">
-              <CheckCircle2 className="h-3 w-3" /> All Gates Operational
-            </span>
+          {/* Interactive Radar Sweep Component */}
+          <div className="w-full lg:w-80 shrink-0">
+            <RadarSweep score={data?.dora_score || 84.2} tier={data?.dora_tier || "High Performer"} />
           </div>
         </div>
       </div>
+
+      {/* Moving Floating Microservice Telemetry Nodes */}
+      <div>
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <Activity className="h-4 w-4 text-primary animate-pulse" />
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Autonomous Microservice Telemetry Cluster
+            </span>
+          </div>
+          <span className="text-[10px] font-mono text-muted-foreground">
+            Continuous Health Pings &bull; Dynamic Floating Nodes
+          </span>
+        </div>
+        <FloatingNodes />
+      </div>
+
+      {/* Autonomous Moving Delivery Pipeline Telemetry */}
+      <AnimatedPipeline />
 
       {/* DORA 4 Core Metrics Section with Interactive Visual Cards */}
       <div className="space-y-3">
@@ -400,7 +417,7 @@ export default function OverviewPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <KPICard
             title="Deployment Frequency"
-            value={dora.deployment_frequency?.value || "1.2"}
+            value={dora.deployment_frequency?.value || "1.25"}
             unit={dora.deployment_frequency?.unit || "deploys / day"}
             status={dora.deployment_frequency?.rating?.toUpperCase() || "HEALTHY"}
             change={12.5}
@@ -546,7 +563,7 @@ export default function OverviewPage() {
 
           <Link
             href="/github-analytics"
-            className="mt-4 flex items-center justify-center gap-2 py-2 px-4 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary text-xs font-semibold transition-colors"
+            className="mt-4 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary/15 hover:bg-primary/25 text-primary text-xs font-semibold transition-all hover:scale-105"
           >
             Inspect GitHub PR Intelligence <ArrowRight className="h-3.5 w-3.5" />
           </Link>
@@ -639,7 +656,7 @@ export default function OverviewPage() {
               <Link
                 key={feat.name}
                 href={feat.href}
-                className="glass-card rounded-2xl p-4 flex flex-col justify-between group hover:border-primary/50 relative overflow-hidden"
+                className="glass-card rounded-2xl p-4 flex flex-col justify-between group hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:scale-[1.02]"
               >
                 {/* Ambient glow accent on card hover */}
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-2xl -z-10 from-primary/5 to-transparent" />

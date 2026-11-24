@@ -65,6 +65,9 @@ export function KPICard({
         className
       )}
     >
+      {/* Top Shimmer Beam on hover */}
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
+
       {/* Background ambient lighting */}
       <div className="absolute -right-8 -top-8 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors pointer-events-none" />
 

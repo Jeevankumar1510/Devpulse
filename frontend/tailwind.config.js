@@ -49,6 +49,26 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-6px)" },
         },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+          "50%": { transform: "translateY(-10px) rotate(1.2deg)" },
+        },
+        "float-reverse": {
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+          "50%": { transform: "translateY(10px) rotate(-1.2deg)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "radar-sweep": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "radar-blip": {
+          "0%, 100%": { opacity: "0.3", transform: "scale(0.85)" },
+          "50%": { opacity: "1", transform: "scale(1.2)" },
+        },
         "pulse-slow": {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0.4 },
@@ -64,6 +84,11 @@ module.exports = {
       },
       animation: {
         float: "float 4s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-reverse": "float-reverse 7s ease-in-out infinite",
+        "float-delayed": "float-delayed 5s ease-in-out 1.5s infinite",
+        "radar-sweep": "radar-sweep 4s linear infinite",
+        "radar-blip": "radar-blip 2.2s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 0.4s ease-out forwards",
         shimmer: "shimmer 2.5s infinite linear",

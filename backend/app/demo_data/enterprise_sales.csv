@@ -1,0 +1,501 @@
+order_id,order_date,customer_segment,region,product_name,contract_value_usd,discount_pct,net_revenue_usd,customer_satisfaction_score,churn_risk_probability
+ORD-7001,2026-01-26,Enterprise,Asia Pacific,CI/CD Accelerator,35607.75,0.1,32046.98,9,0.06
+ORD-7002,2026-03-06,Enterprise,North America,CloudOps Monitor,28196.79,0.05,26786.95,9,0.2
+ORD-7003,2026-04-11,Mid-Market,North America,CodeQuality AI,6565.51,0.0,6565.51,8,0.22
+ORD-7004,2026-01-03,Enterprise,EMEA,CloudOps Monitor,33394.14,0.1,30054.73,8,0.14
+ORD-7005,2026-03-30,Enterprise,EMEA,CI/CD Accelerator,22503.63,0.0,22503.63,8,0.19
+ORD-7006,2026-04-04,Enterprise,EMEA,CI/CD Accelerator,18067.58,0.2,14454.06,6,0.54
+ORD-7007,2026-02-28,SMB,North America,CI/CD Accelerator,2239.45,0.15,1903.53,10,0.05
+ORD-7008,2026-02-23,Enterprise,Asia Pacific,CloudOps Monitor,26447.98,0.0,26447.98,9,0.05
+ORD-7009,2026-02-17,Mid-Market,North America,CodeQuality AI,3343.46,0.15,2841.94,7,0.3
+ORD-7010,2026-05-01,Mid-Market,North America,CodeQuality AI,7178.4,0.15,6101.64,7,0.36
+ORD-7011,2026-03-01,Mid-Market,North America,DevPulse Enterprise,9328.86,0.1,8395.97,9,0.05
+ORD-7012,2026-05-12,Mid-Market,North America,DevPulse Enterprise,9889.58,0.15,8406.14,6,0.37
+ORD-7013,2026-01-23,SMB,Asia Pacific,DevPulse Enterprise,2314.92,0.0,2314.92,7,0.26
+ORD-7014,2026-01-10,Enterprise,North America,CI/CD Accelerator,27735.19,0.0,27735.19,8,0.05
+ORD-7015,2026-02-08,Enterprise,North America,CodeQuality AI,37676.5,0.1,33908.85,7,0.34
+ORD-7016,2026-05-23,SMB,North America,CodeQuality AI,2543.74,0.05,2416.55,8,0.15
+ORD-7017,2026-03-23,Enterprise,Latin America,CI/CD Accelerator,29543.19,0.1,26588.87,10,0.07
+ORD-7018,2026-01-13,Mid-Market,North America,CI/CD Accelerator,5107.73,0.15,4341.57,7,0.16
+ORD-7019,2026-04-11,Mid-Market,Latin America,CodeQuality AI,9999.83,0.05,9499.84,7,0.28
+ORD-7020,2026-03-16,SMB,North America,CloudOps Monitor,2065.06,0.0,2065.06,9,0.26
+ORD-7021,2026-04-29,Enterprise,North America,CI/CD Accelerator,20868.59,0.15,17738.3,8,0.2
+ORD-7022,2026-05-26,SMB,North America,CloudOps Monitor,1567.19,0.05,1488.83,10,0.13
+ORD-7023,2026-04-16,SMB,North America,CodeQuality AI,2132.97,0.15,1813.02,10,0.05
+ORD-7024,2026-02-02,Mid-Market,North America,CI/CD Accelerator,6623.65,0.05,6292.47,8,0.3
+ORD-7025,2026-02-24,SMB,North America,CloudOps Monitor,1110.29,0.05,1054.78,7,0.25
+ORD-7026,2026-05-14,Enterprise,Latin America,CI/CD Accelerator,20011.57,0.1,18010.41,7,0.18
+ORD-7027,2026-03-07,Mid-Market,Asia Pacific,CodeQuality AI,8209.69,0.0,8209.69,7,0.22
+ORD-7028,2026-04-30,SMB,North America,CodeQuality AI,2013.38,0.1,1812.04,8,0.19
+ORD-7029,2026-03-02,SMB,North America,CodeQuality AI,2279.19,0.15,1937.31,7,0.15
+ORD-7030,2026-01-28,SMB,EMEA,CI/CD Accelerator,1785.59,0.1,1607.03,7,0.4
+ORD-7031,2026-01-21,Enterprise,Latin America,CI/CD Accelerator,22595.41,0.0,22595.41,6,0.33
+ORD-7032,2026-03-22,Mid-Market,EMEA,CodeQuality AI,10188.44,0.1,9169.6,8,0.29
+ORD-7033,2026-03-08,Mid-Market,Latin America,CodeQuality AI,9871.23,0.1,8884.11,8,0.22
+ORD-7034,2026-05-29,Mid-Market,North America,CodeQuality AI,584.32,0.1,525.89,10,0.08
+ORD-7035,2026-03-17,Enterprise,North America,CI/CD Accelerator,19181.33,0.2,15345.06,7,0.28
+ORD-7036,2026-03-07,SMB,Latin America,CloudOps Monitor,2107.14,0.2,1685.71,9,0.07
+ORD-7037,2026-02-13,Mid-Market,EMEA,DevPulse Enterprise,8834.92,0.2,7067.94,7,0.35
+ORD-7038,2026-01-21,Mid-Market,EMEA,CodeQuality AI,12497.41,0.15,10622.8,9,0.11
+ORD-7039,2026-04-05,Enterprise,EMEA,CodeQuality AI,21344.46,0.0,21344.46,8,0.2
+ORD-7040,2026-03-31,Mid-Market,North America,DevPulse Enterprise,8523.47,0.0,8523.47,8,0.12
+ORD-7041,2026-01-03,Mid-Market,Asia Pacific,CodeQuality AI,7601.04,0.1,6840.94,9,0.24
+ORD-7042,2026-04-30,SMB,North America,CI/CD Accelerator,1863.92,0.1,1677.53,8,0.29
+ORD-7043,2026-01-10,SMB,Latin America,CodeQuality AI,1282.19,0.0,1282.19,8,0.1
+ORD-7044,2026-03-26,Enterprise,EMEA,CodeQuality AI,35100.28,0.1,31590.25,7,0.25
+ORD-7045,2026-03-15,SMB,Asia Pacific,DevPulse Enterprise,2247.46,0.2,1797.97,9,0.05
+ORD-7046,2026-03-04,Enterprise,North America,CloudOps Monitor,20831.63,0.15,17706.89,9,0.05
+ORD-7047,2026-03-14,Mid-Market,Asia Pacific,CloudOps Monitor,9434.35,0.15,8019.2,6,0.52
+ORD-7048,2026-03-19,SMB,EMEA,CI/CD Accelerator,516.64,0.2,413.31,6,0.52
+ORD-7049,2026-03-03,SMB,EMEA,CodeQuality AI,2139.02,0.0,2139.02,8,0.18
+ORD-7050,2026-04-09,Mid-Market,Asia Pacific,CI/CD Accelerator,8124.81,0.05,7718.57,7,0.38
+ORD-7051,2026-06-08,Enterprise,EMEA,CloudOps Monitor,13843.6,0.15,11767.06,8,0.36
+ORD-7052,2026-05-28,Mid-Market,North America,CodeQuality AI,4816.21,0.2,3852.97,9,0.23
+ORD-7053,2026-05-17,Enterprise,North America,DevPulse Enterprise,26829.61,0.2,21463.69,10,0.18
+ORD-7054,2026-03-04,SMB,Latin America,DevPulse Enterprise,1753.32,0.1,1577.99,7,0.27
+ORD-7055,2026-05-15,Mid-Market,EMEA,CodeQuality AI,5621.96,0.05,5340.86,8,0.28
+ORD-7056,2026-06-02,SMB,EMEA,CI/CD Accelerator,1473.81,0.1,1326.43,6,0.4
+ORD-7057,2026-05-06,Mid-Market,Asia Pacific,DevPulse Enterprise,7873.18,0.2,6298.54,8,0.19
+ORD-7058,2026-05-10,Mid-Market,Asia Pacific,CI/CD Accelerator,10235.03,0.15,8699.78,8,0.24
+ORD-7059,2026-03-20,SMB,Asia Pacific,CloudOps Monitor,1513.44,0.0,1513.44,8,0.37
+ORD-7060,2026-05-22,SMB,Latin America,DevPulse Enterprise,1890.12,0.05,1795.61,6,0.47
+ORD-7061,2026-01-06,Enterprise,Asia Pacific,DevPulse Enterprise,27640.98,0.0,27640.98,9,0.05
+ORD-7062,2026-04-02,Enterprise,North America,CloudOps Monitor,31168.97,0.05,29610.52,6,0.41
+ORD-7063,2026-01-25,Enterprise,EMEA,DevPulse Enterprise,32491.87,0.05,30867.28,7,0.43
+ORD-7064,2026-02-09,Mid-Market,Latin America,CI/CD Accelerator,8043.39,0.1,7239.05,9,0.13
+ORD-7065,2026-02-17,SMB,North America,CloudOps Monitor,1598.09,0.05,1518.19,8,0.26
+ORD-7066,2026-05-17,SMB,Latin America,DevPulse Enterprise,2145.06,0.05,2037.81,8,0.18
+ORD-7067,2026-02-01,Enterprise,EMEA,DevPulse Enterprise,30515.9,0.15,25938.51,7,0.36
+ORD-7068,2026-03-19,Enterprise,EMEA,DevPulse Enterprise,22378.39,0.15,19021.63,6,0.35
+ORD-7069,2026-04-01,SMB,EMEA,DevPulse Enterprise,1747.08,0.0,1747.08,7,0.23
+ORD-7070,2026-02-14,Mid-Market,EMEA,CloudOps Monitor,6887.54,0.0,6887.54,8,0.12
+ORD-7071,2026-05-10,Enterprise,Latin America,CodeQuality AI,28469.72,0.1,25622.75,8,0.06
+ORD-7072,2026-05-31,Enterprise,North America,CodeQuality AI,20143.34,0.2,16114.67,9,0.17
+ORD-7073,2026-06-05,SMB,North America,CI/CD Accelerator,2083.57,0.05,1979.39,10,0.05
+ORD-7074,2026-01-15,Enterprise,Latin America,CodeQuality AI,26394.26,0.0,26394.26,6,0.38
+ORD-7075,2026-05-07,Mid-Market,Asia Pacific,CloudOps Monitor,4845.43,0.15,4118.62,9,0.05
+ORD-7076,2026-06-09,SMB,EMEA,CloudOps Monitor,2662.34,0.0,2662.34,9,0.11
+ORD-7077,2026-01-14,Mid-Market,Latin America,DevPulse Enterprise,4987.27,0.15,4239.18,7,0.34
+ORD-7078,2026-03-16,Mid-Market,North America,DevPulse Enterprise,7179.6,0.15,6102.66,8,0.45
+ORD-7079,2026-02-25,Enterprise,EMEA,CI/CD Accelerator,21785.24,0.05,20695.98,8,0.13
+ORD-7080,2026-05-30,SMB,Asia Pacific,CloudOps Monitor,2010.46,0.0,2010.46,8,0.2
+ORD-7081,2026-03-24,Mid-Market,Latin America,CodeQuality AI,6903.45,0.2,5522.76,9,0.06
+ORD-7082,2026-02-15,Mid-Market,Asia Pacific,CloudOps Monitor,6559.03,0.2,5247.22,9,0.09
+ORD-7083,2026-05-02,Mid-Market,EMEA,CodeQuality AI,10303.98,0.05,9788.78,8,0.21
+ORD-7084,2026-03-13,SMB,North America,CodeQuality AI,2183.46,0.1,1965.11,8,0.11
+ORD-7085,2026-02-16,Mid-Market,Asia Pacific,CodeQuality AI,5926.05,0.15,5037.14,7,0.41
+ORD-7086,2026-06-02,Mid-Market,Latin America,CI/CD Accelerator,11003.78,0.15,9353.21,8,0.42
+ORD-7087,2026-03-22,Enterprise,EMEA,CodeQuality AI,32950.69,0.0,32950.69,7,0.17
+ORD-7088,2026-04-20,Mid-Market,EMEA,CloudOps Monitor,9507.31,0.15,8081.21,10,0.05
+ORD-7089,2026-04-26,SMB,North America,DevPulse Enterprise,1683.46,0.0,1683.46,10,0.05
+ORD-7090,2026-03-08,Mid-Market,EMEA,CloudOps Monitor,4730.75,0.05,4494.21,7,0.23
+ORD-7091,2026-05-01,Enterprise,Asia Pacific,CloudOps Monitor,25429.03,0.2,20343.22,7,0.35
+ORD-7092,2026-05-06,SMB,North America,DevPulse Enterprise,1667.44,0.05,1584.07,8,0.31
+ORD-7093,2026-04-29,Mid-Market,Latin America,CI/CD Accelerator,6453.25,0.15,5485.26,8,0.31
+ORD-7094,2026-03-18,Mid-Market,North America,CloudOps Monitor,8298.42,0.2,6638.74,10,0.05
+ORD-7095,2026-04-30,SMB,Asia Pacific,CloudOps Monitor,1659.22,0.05,1576.26,9,0.09
+ORD-7096,2026-05-24,Mid-Market,EMEA,CI/CD Accelerator,5030.26,0.15,4275.72,7,0.1
+ORD-7097,2026-05-20,Enterprise,EMEA,DevPulse Enterprise,27264.52,0.0,27264.52,5,0.32
+ORD-7098,2026-04-04,Mid-Market,EMEA,CodeQuality AI,5717.45,0.1,5145.7,10,0.05
+ORD-7099,2026-04-18,SMB,EMEA,CloudOps Monitor,2007.69,0.15,1706.54,8,0.2
+ORD-7100,2026-01-08,Enterprise,North America,DevPulse Enterprise,22558.15,0.15,19174.43,9,0.18
+ORD-7101,2026-02-12,Enterprise,North America,CloudOps Monitor,20811.77,0.05,19771.18,7,0.35
+ORD-7102,2026-05-31,SMB,EMEA,CloudOps Monitor,1763.86,0.0,1763.86,7,0.27
+ORD-7103,2026-06-06,Mid-Market,Latin America,CloudOps Monitor,4681.79,0.0,4681.79,9,0.05
+ORD-7104,2026-01-08,Mid-Market,North America,DevPulse Enterprise,9426.58,0.2,7541.26,10,0.05
+ORD-7105,2026-01-20,SMB,North America,CI/CD Accelerator,867.44,0.1,780.7,8,0.13
+ORD-7106,2026-05-26,SMB,North America,DevPulse Enterprise,2724.9,0.0,2724.9,8,0.05
+ORD-7107,2026-06-08,Mid-Market,Asia Pacific,DevPulse Enterprise,8204.17,0.1,7383.75,7,0.19
+ORD-7108,2026-01-09,Enterprise,North America,CI/CD Accelerator,29076.71,0.05,27622.87,8,0.17
+ORD-7109,2026-04-10,Enterprise,North America,DevPulse Enterprise,24855.96,0.2,19884.77,6,0.4
+ORD-7110,2026-04-04,Mid-Market,North America,CodeQuality AI,6404.45,0.15,5443.78,9,0.15
+ORD-7111,2026-01-26,SMB,EMEA,CI/CD Accelerator,1541.98,0.2,1233.58,8,0.1
+ORD-7112,2026-01-26,Mid-Market,North America,DevPulse Enterprise,3877.38,0.15,3295.77,7,0.35
+ORD-7113,2026-01-11,SMB,EMEA,CloudOps Monitor,2161.02,0.15,1836.87,8,0.31
+ORD-7114,2026-05-30,SMB,EMEA,CI/CD Accelerator,1579.72,0.1,1421.75,8,0.22
+ORD-7115,2026-02-10,SMB,North America,CodeQuality AI,1718.03,0.2,1374.42,8,0.21
+ORD-7116,2026-02-02,Mid-Market,EMEA,CI/CD Accelerator,7098.83,0.2,5679.06,6,0.43
+ORD-7117,2026-04-13,SMB,North America,CodeQuality AI,2009.29,0.05,1908.83,6,0.46
+ORD-7118,2026-04-18,Enterprise,EMEA,CloudOps Monitor,33987.85,0.0,33987.85,7,0.15
+ORD-7119,2026-02-27,Mid-Market,Asia Pacific,CodeQuality AI,5420.97,0.05,5149.92,8,0.17
+ORD-7120,2026-03-09,Enterprise,EMEA,CI/CD Accelerator,26704.55,0.0,26704.55,7,0.33
+ORD-7121,2026-03-10,SMB,North America,CloudOps Monitor,1555.46,0.15,1322.14,9,0.16
+ORD-7122,2026-03-19,Enterprise,Asia Pacific,DevPulse Enterprise,32942.03,0.05,31294.93,7,0.41
+ORD-7123,2026-04-07,Mid-Market,EMEA,CI/CD Accelerator,5047.15,0.15,4290.08,8,0.2
+ORD-7124,2026-04-25,Enterprise,EMEA,CodeQuality AI,24839.89,0.15,21113.91,7,0.49
+ORD-7125,2026-05-06,Mid-Market,North America,CI/CD Accelerator,6689.62,0.15,5686.18,7,0.51
+ORD-7126,2026-02-20,Mid-Market,North America,CodeQuality AI,8619.94,0.0,8619.94,6,0.21
+ORD-7127,2026-02-13,Mid-Market,North America,CodeQuality AI,4690.16,0.0,4690.16,10,0.06
+ORD-7128,2026-01-20,Mid-Market,North America,CloudOps Monitor,4576.06,0.2,3660.85,7,0.2
+ORD-7129,2026-01-28,SMB,Asia Pacific,CodeQuality AI,1730.68,0.1,1557.61,7,0.13
+ORD-7130,2026-02-07,Mid-Market,Asia Pacific,DevPulse Enterprise,8028.4,0.2,6422.72,9,0.05
+ORD-7131,2026-05-03,Enterprise,Asia Pacific,CI/CD Accelerator,25374.57,0.1,22837.11,7,0.23
+ORD-7132,2026-05-24,Mid-Market,North America,DevPulse Enterprise,10247.96,0.05,9735.56,9,0.14
+ORD-7133,2026-06-04,SMB,North America,CloudOps Monitor,2054.14,0.0,2054.14,8,0.26
+ORD-7134,2026-03-18,Mid-Market,North America,CodeQuality AI,6823.98,0.2,5459.18,6,0.43
+ORD-7135,2026-03-14,Mid-Market,EMEA,DevPulse Enterprise,7528.61,0.1,6775.75,7,0.19
+ORD-7136,2026-02-19,Mid-Market,Asia Pacific,CodeQuality AI,3956.05,0.0,3956.05,8,0.13
+ORD-7137,2026-01-19,Mid-Market,North America,CI/CD Accelerator,3345.33,0.1,3010.8,8,0.12
+ORD-7138,2026-04-17,Mid-Market,North America,DevPulse Enterprise,9081.93,0.05,8627.83,8,0.24
+ORD-7139,2026-04-23,Mid-Market,North America,CloudOps Monitor,6502.23,0.1,5852.01,7,0.31
+ORD-7140,2026-04-23,Mid-Market,North America,CloudOps Monitor,5132.77,0.15,4362.85,9,0.05
+ORD-7141,2026-04-27,Mid-Market,EMEA,CloudOps Monitor,5617.35,0.0,5617.35,9,0.05
+ORD-7142,2026-03-10,Mid-Market,EMEA,DevPulse Enterprise,8662.31,0.0,8662.31,10,0.05
+ORD-7143,2026-01-27,SMB,EMEA,CodeQuality AI,1715.75,0.05,1629.96,9,0.08
+ORD-7144,2026-03-26,SMB,Asia Pacific,CodeQuality AI,2291.03,0.15,1947.38,8,0.14
+ORD-7145,2026-05-26,Mid-Market,North America,CloudOps Monitor,5807.52,0.15,4936.39,10,0.14
+ORD-7146,2026-05-29,SMB,Latin America,CloudOps Monitor,2108.12,0.0,2108.12,7,0.25
+ORD-7147,2026-03-28,Mid-Market,North America,CodeQuality AI,10346.86,0.15,8794.83,9,0.25
+ORD-7148,2026-05-28,Enterprise,EMEA,CodeQuality AI,18883.21,0.1,16994.89,8,0.2
+ORD-7149,2026-05-08,Mid-Market,EMEA,DevPulse Enterprise,5459.42,0.05,5186.45,7,0.25
+ORD-7150,2026-02-12,Mid-Market,Latin America,CodeQuality AI,9020.37,0.15,7667.31,7,0.42
+ORD-7151,2026-02-21,SMB,EMEA,DevPulse Enterprise,904.52,0.0,904.52,8,0.09
+ORD-7152,2026-04-11,SMB,EMEA,CI/CD Accelerator,1481.46,0.1,1333.31,8,0.43
+ORD-7153,2026-04-10,Enterprise,North America,CodeQuality AI,23659.27,0.2,18927.42,7,0.18
+ORD-7154,2026-03-19,SMB,North America,CloudOps Monitor,1271.6,0.2,1017.28,8,0.25
+ORD-7155,2026-02-21,SMB,EMEA,CI/CD Accelerator,1205.34,0.15,1024.54,7,0.28
+ORD-7156,2026-01-15,Mid-Market,North America,CI/CD Accelerator,7114.05,0.05,6758.35,9,0.05
+ORD-7157,2026-04-11,Enterprise,EMEA,CI/CD Accelerator,30473.03,0.15,25902.08,7,0.29
+ORD-7158,2026-02-12,SMB,Asia Pacific,CloudOps Monitor,2048.24,0.0,2048.24,7,0.05
+ORD-7159,2026-03-23,Mid-Market,EMEA,CodeQuality AI,6922.44,0.0,6922.44,10,0.05
+ORD-7160,2026-01-24,Mid-Market,Latin America,CI/CD Accelerator,9684.36,0.05,9200.14,9,0.15
+ORD-7161,2026-01-02,SMB,Asia Pacific,CodeQuality AI,1525.18,0.05,1448.92,10,0.08
+ORD-7162,2026-04-03,Enterprise,Latin America,CloudOps Monitor,17896.73,0.0,17896.73,8,0.23
+ORD-7163,2026-01-25,Mid-Market,North America,CloudOps Monitor,7048.74,0.0,7048.74,7,0.25
+ORD-7164,2026-04-01,SMB,North America,CodeQuality AI,2180.35,0.2,1744.28,10,0.05
+ORD-7165,2026-05-11,Mid-Market,North America,CodeQuality AI,7852.64,0.05,7460.01,7,0.25
+ORD-7166,2026-04-24,Mid-Market,North America,DevPulse Enterprise,7989.61,0.05,7590.13,8,0.24
+ORD-7167,2026-02-01,Mid-Market,Latin America,CI/CD Accelerator,7237.68,0.05,6875.8,8,0.3
+ORD-7168,2026-06-04,Mid-Market,North America,CI/CD Accelerator,7543.85,0.0,7543.85,8,0.09
+ORD-7169,2026-05-31,Mid-Market,Asia Pacific,CI/CD Accelerator,4520.54,0.1,4068.49,9,0.25
+ORD-7170,2026-03-25,Enterprise,EMEA,DevPulse Enterprise,23430.16,0.0,23430.16,8,0.05
+ORD-7171,2026-04-13,Mid-Market,EMEA,CI/CD Accelerator,7616.84,0.05,7236.0,6,0.51
+ORD-7172,2026-01-26,Mid-Market,North America,CodeQuality AI,11425.12,0.2,9140.1,8,0.05
+ORD-7173,2026-04-15,Enterprise,North America,DevPulse Enterprise,18074.86,0.1,16267.37,9,0.18
+ORD-7174,2026-02-28,Enterprise,Latin America,CodeQuality AI,16203.9,0.0,16203.9,10,0.05
+ORD-7175,2026-01-06,Enterprise,Asia Pacific,CI/CD Accelerator,30300.35,0.15,25755.3,9,0.05
+ORD-7176,2026-01-09,SMB,EMEA,CloudOps Monitor,2067.09,0.1,1860.38,10,0.05
+ORD-7177,2026-01-21,Mid-Market,North America,CloudOps Monitor,7553.14,0.0,7553.14,9,0.2
+ORD-7178,2026-05-02,Enterprise,North America,DevPulse Enterprise,20871.98,0.15,17741.18,8,0.22
+ORD-7179,2026-01-11,Mid-Market,Asia Pacific,CI/CD Accelerator,7018.77,0.15,5965.95,7,0.34
+ORD-7180,2026-02-04,SMB,North America,DevPulse Enterprise,961.55,0.1,865.39,9,0.18
+ORD-7181,2026-04-27,Mid-Market,Asia Pacific,DevPulse Enterprise,6898.53,0.05,6553.6,6,0.37
+ORD-7182,2026-04-12,Enterprise,Asia Pacific,CodeQuality AI,17807.58,0.0,17807.58,8,0.32
+ORD-7183,2026-02-06,Enterprise,North America,CloudOps Monitor,24277.45,0.0,24277.45,6,0.49
+ORD-7184,2026-04-14,Mid-Market,EMEA,CodeQuality AI,7839.85,0.0,7839.85,8,0.34
+ORD-7185,2026-01-07,Mid-Market,North America,CI/CD Accelerator,9702.09,0.05,9216.99,9,0.22
+ORD-7186,2026-01-05,Enterprise,North America,DevPulse Enterprise,23868.54,0.0,23868.54,8,0.36
+ORD-7187,2026-01-17,Mid-Market,North America,CI/CD Accelerator,8138.02,0.05,7731.12,7,0.07
+ORD-7188,2026-05-15,Enterprise,EMEA,DevPulse Enterprise,26586.06,0.15,22598.15,9,0.19
+ORD-7189,2026-05-22,Enterprise,Asia Pacific,CloudOps Monitor,22914.08,0.2,18331.26,9,0.05
+ORD-7190,2026-01-19,Enterprise,EMEA,CloudOps Monitor,31490.26,0.15,26766.72,9,0.05
+ORD-7191,2026-06-07,Mid-Market,North America,CodeQuality AI,7376.34,0.15,6269.89,9,0.06
+ORD-7192,2026-02-11,Mid-Market,EMEA,DevPulse Enterprise,6916.46,0.15,5878.99,9,0.26
+ORD-7193,2026-04-27,Mid-Market,EMEA,CI/CD Accelerator,6639.32,0.1,5975.39,9,0.23
+ORD-7194,2026-03-23,Mid-Market,North America,CloudOps Monitor,6959.17,0.05,6611.21,10,0.05
+ORD-7195,2026-01-30,Mid-Market,Asia Pacific,CodeQuality AI,6018.72,0.1,5416.85,9,0.05
+ORD-7196,2026-02-28,Enterprise,North America,CI/CD Accelerator,18981.72,0.2,15185.38,8,0.18
+ORD-7197,2026-03-16,Mid-Market,North America,CodeQuality AI,9890.03,0.05,9395.53,7,0.37
+ORD-7198,2026-06-05,SMB,North America,CodeQuality AI,1682.0,0.0,1682.0,8,0.08
+ORD-7199,2026-05-13,SMB,EMEA,DevPulse Enterprise,808.69,0.05,768.26,8,0.13
+ORD-7200,2026-04-06,Mid-Market,North America,DevPulse Enterprise,8308.56,0.05,7893.13,9,0.09
+ORD-7201,2026-03-11,SMB,EMEA,CodeQuality AI,1964.4,0.15,1669.74,10,0.05
+ORD-7202,2026-06-02,Enterprise,North America,CloudOps Monitor,18121.54,0.2,14497.23,7,0.35
+ORD-7203,2026-04-25,Mid-Market,Asia Pacific,CI/CD Accelerator,5518.53,0.1,4966.68,9,0.05
+ORD-7204,2026-03-16,Mid-Market,North America,CloudOps Monitor,7692.27,0.05,7307.66,9,0.13
+ORD-7205,2026-04-03,Mid-Market,North America,CI/CD Accelerator,7003.51,0.05,6653.33,9,0.11
+ORD-7206,2026-02-16,Enterprise,Asia Pacific,DevPulse Enterprise,30827.17,0.05,29285.81,8,0.16
+ORD-7207,2026-05-10,Enterprise,Asia Pacific,DevPulse Enterprise,23274.23,0.0,23274.23,9,0.26
+ORD-7208,2026-01-30,SMB,Latin America,CodeQuality AI,1535.52,0.15,1305.19,10,0.07
+ORD-7209,2026-02-08,SMB,Asia Pacific,CodeQuality AI,1166.83,0.0,1166.83,6,0.51
+ORD-7210,2026-05-31,SMB,North America,CI/CD Accelerator,2054.97,0.2,1643.98,7,0.27
+ORD-7211,2026-01-22,Mid-Market,North America,DevPulse Enterprise,7763.59,0.05,7375.41,7,0.29
+ORD-7212,2026-01-21,Mid-Market,EMEA,CI/CD Accelerator,6792.33,0.15,5773.48,10,0.05
+ORD-7213,2026-06-07,Enterprise,EMEA,CloudOps Monitor,22800.75,0.0,22800.75,6,0.3
+ORD-7214,2026-06-05,Mid-Market,Asia Pacific,CloudOps Monitor,3650.51,0.0,3650.51,8,0.17
+ORD-7215,2026-04-20,Mid-Market,North America,CI/CD Accelerator,8524.82,0.15,7246.1,9,0.16
+ORD-7216,2026-06-06,SMB,North America,CodeQuality AI,1631.02,0.1,1467.92,8,0.21
+ORD-7217,2026-05-18,SMB,EMEA,CloudOps Monitor,1248.28,0.15,1061.04,8,0.27
+ORD-7218,2026-04-21,SMB,North America,DevPulse Enterprise,1734.13,0.15,1474.01,10,0.05
+ORD-7219,2026-03-14,Enterprise,Asia Pacific,CodeQuality AI,17297.94,0.0,17297.94,5,0.43
+ORD-7220,2026-05-28,Mid-Market,EMEA,CodeQuality AI,9292.38,0.2,7433.9,9,0.07
+ORD-7221,2026-03-11,Mid-Market,Latin America,CodeQuality AI,6816.96,0.15,5794.42,10,0.05
+ORD-7222,2026-02-17,SMB,North America,CloudOps Monitor,1975.98,0.2,1580.78,9,0.22
+ORD-7223,2026-04-06,Mid-Market,North America,CI/CD Accelerator,3385.49,0.0,3385.49,8,0.19
+ORD-7224,2026-03-17,Enterprise,Asia Pacific,CI/CD Accelerator,15198.56,0.05,14438.63,10,0.14
+ORD-7225,2026-05-05,Mid-Market,North America,CI/CD Accelerator,6523.36,0.0,6523.36,7,0.4
+ORD-7226,2026-04-21,Mid-Market,North America,CloudOps Monitor,11150.46,0.05,10592.94,9,0.05
+ORD-7227,2026-05-12,Mid-Market,North America,CI/CD Accelerator,5734.1,0.15,4873.99,8,0.28
+ORD-7228,2026-01-05,Mid-Market,EMEA,CI/CD Accelerator,8820.22,0.0,8820.22,8,0.22
+ORD-7229,2026-04-03,SMB,Asia Pacific,DevPulse Enterprise,1768.4,0.2,1414.72,8,0.28
+ORD-7230,2026-05-29,Mid-Market,North America,CI/CD Accelerator,6531.14,0.05,6204.58,6,0.2
+ORD-7231,2026-03-28,Enterprise,North America,CodeQuality AI,23006.79,0.05,21856.45,9,0.13
+ORD-7232,2026-04-01,Mid-Market,North America,CodeQuality AI,7753.93,0.0,7753.93,9,0.15
+ORD-7233,2026-05-08,Mid-Market,North America,DevPulse Enterprise,7303.31,0.1,6572.98,9,0.1
+ORD-7234,2026-02-07,Mid-Market,North America,CI/CD Accelerator,6755.71,0.1,6080.14,8,0.23
+ORD-7235,2026-02-08,Mid-Market,EMEA,CloudOps Monitor,8135.17,0.0,8135.17,8,0.31
+ORD-7236,2026-04-23,Mid-Market,North America,CI/CD Accelerator,6674.03,0.1,6006.63,7,0.5
+ORD-7237,2026-03-18,SMB,Asia Pacific,CloudOps Monitor,1492.34,0.05,1417.72,7,0.37
+ORD-7238,2026-04-29,Enterprise,Asia Pacific,DevPulse Enterprise,31032.06,0.1,27928.85,9,0.14
+ORD-7239,2026-02-15,SMB,North America,CloudOps Monitor,1699.64,0.15,1444.69,8,0.13
+ORD-7240,2026-03-07,SMB,EMEA,DevPulse Enterprise,922.31,0.2,737.85,8,0.17
+ORD-7241,2026-01-02,Enterprise,EMEA,DevPulse Enterprise,15892.26,0.05,15097.65,8,0.29
+ORD-7242,2026-05-16,Mid-Market,North America,DevPulse Enterprise,9991.79,0.15,8493.02,7,0.32
+ORD-7243,2026-02-09,Enterprise,EMEA,CI/CD Accelerator,26964.24,0.2,21571.39,10,0.12
+ORD-7244,2026-04-11,SMB,North America,CI/CD Accelerator,2088.36,0.0,2088.36,8,0.23
+ORD-7245,2026-02-15,Mid-Market,North America,CodeQuality AI,6479.64,0.2,5183.71,9,0.08
+ORD-7246,2026-02-28,Mid-Market,EMEA,CodeQuality AI,8602.65,0.05,8172.52,8,0.31
+ORD-7247,2026-01-16,Mid-Market,North America,CodeQuality AI,6874.2,0.0,6874.2,9,0.08
+ORD-7248,2026-02-18,SMB,EMEA,DevPulse Enterprise,1356.09,0.15,1152.68,9,0.05
+ORD-7249,2026-06-08,SMB,North America,CloudOps Monitor,1752.22,0.15,1489.39,7,0.23
+ORD-7250,2026-04-27,Enterprise,Asia Pacific,DevPulse Enterprise,31971.88,0.0,31971.88,9,0.05
+ORD-7251,2026-05-22,Mid-Market,Latin America,DevPulse Enterprise,7077.47,0.15,6015.85,10,0.05
+ORD-7252,2026-03-24,Mid-Market,North America,CodeQuality AI,9314.68,0.05,8848.95,8,0.05
+ORD-7253,2026-01-31,Enterprise,Asia Pacific,CloudOps Monitor,23221.37,0.15,19738.16,8,0.41
+ORD-7254,2026-05-28,Enterprise,Asia Pacific,CloudOps Monitor,18942.33,0.2,15153.86,7,0.31
+ORD-7255,2026-06-04,Mid-Market,Asia Pacific,CodeQuality AI,8072.16,0.2,6457.73,9,0.2
+ORD-7256,2026-03-09,SMB,North America,CodeQuality AI,1787.02,0.0,1787.02,7,0.33
+ORD-7257,2026-05-02,Mid-Market,EMEA,CloudOps Monitor,5591.24,0.2,4472.99,7,0.43
+ORD-7258,2026-03-09,Mid-Market,North America,CI/CD Accelerator,7716.48,0.2,6173.18,6,0.39
+ORD-7259,2026-04-23,Mid-Market,Latin America,CodeQuality AI,7561.92,0.05,7183.82,10,0.07
+ORD-7260,2026-02-03,Enterprise,North America,DevPulse Enterprise,22262.62,0.1,20036.36,9,0.31
+ORD-7261,2026-03-08,SMB,North America,CI/CD Accelerator,2324.35,0.05,2208.13,7,0.27
+ORD-7262,2026-05-28,Mid-Market,Latin America,CI/CD Accelerator,7629.66,0.15,6485.21,9,0.07
+ORD-7263,2026-03-30,SMB,North America,CI/CD Accelerator,1117.65,0.0,1117.65,7,0.19
+ORD-7264,2026-04-26,Mid-Market,Asia Pacific,CloudOps Monitor,9137.26,0.1,8223.53,8,0.17
+ORD-7265,2026-04-19,Mid-Market,North America,CI/CD Accelerator,5685.24,0.15,4832.45,8,0.31
+ORD-7266,2026-02-21,Mid-Market,North America,CloudOps Monitor,3582.09,0.1,3223.88,10,0.05
+ORD-7267,2026-01-21,Mid-Market,Latin America,CloudOps Monitor,7937.44,0.15,6746.82,10,0.05
+ORD-7268,2026-05-09,Enterprise,EMEA,DevPulse Enterprise,27219.67,0.0,27219.67,8,0.27
+ORD-7269,2026-02-23,Mid-Market,EMEA,CI/CD Accelerator,6643.25,0.1,5978.93,7,0.18
+ORD-7270,2026-01-29,Enterprise,North America,CloudOps Monitor,14072.54,0.2,11258.03,8,0.28
+ORD-7271,2026-02-19,Enterprise,North America,CodeQuality AI,33194.28,0.1,29874.85,8,0.22
+ORD-7272,2026-03-11,Mid-Market,Latin America,CI/CD Accelerator,9772.99,0.2,7818.39,8,0.1
+ORD-7273,2026-01-24,SMB,Latin America,CodeQuality AI,2175.42,0.15,1849.11,9,0.05
+ORD-7274,2026-01-06,Mid-Market,North America,CI/CD Accelerator,6832.72,0.05,6491.08,9,0.16
+ORD-7275,2026-02-06,Mid-Market,EMEA,CloudOps Monitor,7957.68,0.2,6366.14,8,0.05
+ORD-7276,2026-02-12,SMB,North America,CI/CD Accelerator,1560.86,0.2,1248.69,9,0.05
+ORD-7277,2026-02-27,Enterprise,Asia Pacific,CodeQuality AI,34674.07,0.1,31206.66,8,0.29
+ORD-7278,2026-02-21,Enterprise,EMEA,CodeQuality AI,19726.79,0.1,17754.11,8,0.15
+ORD-7279,2026-05-07,SMB,Asia Pacific,CloudOps Monitor,1556.34,0.15,1322.89,8,0.44
+ORD-7280,2026-04-23,SMB,North America,CloudOps Monitor,2766.37,0.2,2213.1,8,0.23
+ORD-7281,2026-03-11,Mid-Market,North America,CloudOps Monitor,5337.25,0.0,5337.25,10,0.13
+ORD-7282,2026-01-30,Mid-Market,North America,CloudOps Monitor,6499.78,0.2,5199.82,8,0.22
+ORD-7283,2026-04-09,SMB,Asia Pacific,CI/CD Accelerator,1418.16,0.0,1418.16,6,0.37
+ORD-7284,2026-05-18,Enterprise,North America,DevPulse Enterprise,23213.88,0.05,22053.19,5,0.48
+ORD-7285,2026-03-16,Mid-Market,Latin America,CodeQuality AI,8319.34,0.15,7071.44,9,0.05
+ORD-7286,2026-03-15,SMB,Asia Pacific,CI/CD Accelerator,1593.8,0.05,1514.11,8,0.2
+ORD-7287,2026-03-20,SMB,North America,CodeQuality AI,1515.15,0.0,1515.15,8,0.28
+ORD-7288,2026-02-14,SMB,EMEA,DevPulse Enterprise,1604.9,0.15,1364.16,9,0.05
+ORD-7289,2026-01-14,SMB,EMEA,DevPulse Enterprise,1394.93,0.0,1394.93,7,0.18
+ORD-7290,2026-03-30,Enterprise,EMEA,CI/CD Accelerator,22138.39,0.2,17710.71,7,0.24
+ORD-7291,2026-01-25,Mid-Market,North America,DevPulse Enterprise,8106.84,0.0,8106.84,7,0.42
+ORD-7292,2026-06-01,Mid-Market,EMEA,CI/CD Accelerator,5039.12,0.05,4787.16,6,0.65
+ORD-7293,2026-05-23,SMB,EMEA,CloudOps Monitor,1309.83,0.15,1113.36,6,0.51
+ORD-7294,2026-03-16,Enterprise,EMEA,CI/CD Accelerator,25765.01,0.0,25765.01,9,0.05
+ORD-7295,2026-01-26,Enterprise,EMEA,DevPulse Enterprise,28860.28,0.15,24531.24,9,0.28
+ORD-7296,2026-04-16,Mid-Market,North America,CloudOps Monitor,10926.45,0.0,10926.45,8,0.14
+ORD-7297,2026-01-18,Enterprise,North America,DevPulse Enterprise,34723.44,0.05,32987.27,7,0.29
+ORD-7298,2026-03-24,SMB,EMEA,CodeQuality AI,2144.89,0.15,1823.16,7,0.34
+ORD-7299,2026-06-09,Enterprise,North America,CI/CD Accelerator,33237.26,0.0,33237.26,7,0.32
+ORD-7300,2026-03-07,SMB,Asia Pacific,CodeQuality AI,665.28,0.0,665.28,7,0.3
+ORD-7301,2026-04-13,SMB,Asia Pacific,CI/CD Accelerator,2688.26,0.05,2553.85,7,0.27
+ORD-7302,2026-01-05,Enterprise,Latin America,CodeQuality AI,21464.05,0.15,18244.44,9,0.11
+ORD-7303,2026-01-20,Mid-Market,North America,DevPulse Enterprise,9464.1,0.2,7571.28,9,0.05
+ORD-7304,2026-04-10,Mid-Market,Asia Pacific,DevPulse Enterprise,10995.51,0.1,9895.96,8,0.07
+ORD-7305,2026-01-02,SMB,North America,CodeQuality AI,1671.84,0.0,1671.84,7,0.2
+ORD-7306,2026-03-04,Mid-Market,Asia Pacific,CodeQuality AI,5693.55,0.2,4554.84,7,0.26
+ORD-7307,2026-06-08,Enterprise,EMEA,CI/CD Accelerator,19215.37,0.15,16333.06,9,0.05
+ORD-7308,2026-02-16,SMB,Asia Pacific,DevPulse Enterprise,2668.09,0.05,2534.69,7,0.22
+ORD-7309,2026-05-26,SMB,North America,CodeQuality AI,2023.88,0.2,1619.1,9,0.08
+ORD-7310,2026-05-25,Enterprise,North America,CI/CD Accelerator,24814.4,0.0,24814.4,9,0.07
+ORD-7311,2026-03-23,SMB,Asia Pacific,CloudOps Monitor,1839.27,0.15,1563.38,7,0.23
+ORD-7312,2026-05-06,Mid-Market,Asia Pacific,CodeQuality AI,9122.36,0.2,7297.89,8,0.2
+ORD-7313,2026-04-08,Mid-Market,Asia Pacific,DevPulse Enterprise,9489.22,0.1,8540.3,9,0.05
+ORD-7314,2026-05-09,Enterprise,North America,CloudOps Monitor,12122.06,0.0,12122.06,10,0.05
+ORD-7315,2026-01-04,SMB,EMEA,CI/CD Accelerator,1534.54,0.0,1534.54,8,0.19
+ORD-7316,2026-06-02,Mid-Market,EMEA,CI/CD Accelerator,8540.06,0.0,8540.06,6,0.3
+ORD-7317,2026-01-07,Enterprise,Asia Pacific,CI/CD Accelerator,34119.91,0.1,30707.92,7,0.27
+ORD-7318,2026-05-04,Mid-Market,Asia Pacific,CloudOps Monitor,7099.4,0.2,5679.52,8,0.24
+ORD-7319,2026-05-21,Enterprise,North America,CI/CD Accelerator,23828.52,0.05,22637.09,7,0.36
+ORD-7320,2026-04-22,Enterprise,North America,CodeQuality AI,34832.5,0.2,27866.0,7,0.44
+ORD-7321,2026-03-17,Enterprise,EMEA,CodeQuality AI,21841.81,0.2,17473.45,7,0.23
+ORD-7322,2026-04-14,Enterprise,North America,CodeQuality AI,32042.89,0.2,25634.31,8,0.11
+ORD-7323,2026-01-03,Enterprise,North America,DevPulse Enterprise,26745.09,0.15,22733.33,9,0.05
+ORD-7324,2026-03-28,Enterprise,North America,CloudOps Monitor,32296.6,0.0,32296.6,8,0.06
+ORD-7325,2026-02-22,Mid-Market,Asia Pacific,CI/CD Accelerator,6807.44,0.05,6467.07,8,0.17
+ORD-7326,2026-03-10,SMB,North America,CodeQuality AI,2215.18,0.15,1882.9,6,0.37
+ORD-7327,2026-01-27,Enterprise,North America,CI/CD Accelerator,22557.81,0.15,19174.14,7,0.27
+ORD-7328,2026-01-13,Enterprise,EMEA,CloudOps Monitor,23675.96,0.05,22492.16,8,0.24
+ORD-7329,2026-05-23,Mid-Market,North America,DevPulse Enterprise,10233.18,0.2,8186.54,8,0.19
+ORD-7330,2026-01-01,SMB,Asia Pacific,DevPulse Enterprise,1916.52,0.1,1724.87,7,0.22
+ORD-7331,2026-02-09,SMB,Latin America,CodeQuality AI,2258.77,0.2,1807.02,9,0.09
+ORD-7332,2026-04-05,Enterprise,Asia Pacific,CI/CD Accelerator,26519.93,0.1,23867.94,7,0.38
+ORD-7333,2026-01-15,SMB,North America,CI/CD Accelerator,2228.92,0.05,2117.47,7,0.35
+ORD-7334,2026-05-11,Mid-Market,Asia Pacific,CodeQuality AI,5352.94,0.1,4817.65,8,0.2
+ORD-7335,2026-02-09,SMB,North America,CloudOps Monitor,2329.4,0.05,2212.93,6,0.41
+ORD-7336,2026-01-26,Mid-Market,North America,CI/CD Accelerator,10830.97,0.1,9747.87,9,0.11
+ORD-7337,2026-04-25,SMB,EMEA,DevPulse Enterprise,1745.54,0.15,1483.71,9,0.23
+ORD-7338,2026-05-07,Mid-Market,Latin America,DevPulse Enterprise,3657.0,0.1,3291.3,8,0.05
+ORD-7339,2026-04-14,SMB,Asia Pacific,CodeQuality AI,2631.54,0.05,2499.96,9,0.16
+ORD-7340,2026-02-22,Enterprise,North America,DevPulse Enterprise,20719.04,0.2,16575.23,7,0.22
+ORD-7341,2026-05-27,Enterprise,Asia Pacific,CodeQuality AI,16238.69,0.0,16238.69,6,0.48
+ORD-7342,2026-05-22,Mid-Market,North America,DevPulse Enterprise,9810.62,0.05,9320.09,9,0.05
+ORD-7343,2026-02-11,SMB,North America,DevPulse Enterprise,1790.37,0.15,1521.81,8,0.28
+ORD-7344,2026-03-13,SMB,North America,CI/CD Accelerator,1544.01,0.1,1389.61,9,0.07
+ORD-7345,2026-05-27,SMB,North America,DevPulse Enterprise,1901.59,0.15,1616.35,5,0.46
+ORD-7346,2026-03-07,Mid-Market,North America,CodeQuality AI,11265.89,0.0,11265.89,8,0.12
+ORD-7347,2026-03-08,SMB,EMEA,DevPulse Enterprise,1886.48,0.15,1603.51,7,0.2
+ORD-7348,2026-03-05,Mid-Market,EMEA,CodeQuality AI,8469.05,0.0,8469.05,9,0.19
+ORD-7349,2026-01-07,Mid-Market,North America,CloudOps Monitor,6251.34,0.05,5938.77,7,0.28
+ORD-7350,2026-05-15,Enterprise,North America,DevPulse Enterprise,19698.75,0.1,17728.88,9,0.05
+ORD-7351,2026-05-13,Mid-Market,North America,CodeQuality AI,4282.3,0.05,4068.18,7,0.39
+ORD-7352,2026-02-28,Enterprise,Latin America,CodeQuality AI,22129.29,0.2,17703.43,6,0.27
+ORD-7353,2026-05-12,Mid-Market,Asia Pacific,CloudOps Monitor,7621.05,0.2,6096.84,9,0.05
+ORD-7354,2026-04-29,SMB,Asia Pacific,DevPulse Enterprise,1733.86,0.15,1473.78,7,0.22
+ORD-7355,2026-03-13,Enterprise,Latin America,CI/CD Accelerator,21297.79,0.2,17038.23,8,0.08
+ORD-7356,2026-04-14,SMB,North America,CI/CD Accelerator,2311.35,0.0,2311.35,6,0.5
+ORD-7357,2026-01-03,Enterprise,EMEA,CodeQuality AI,30790.67,0.05,29251.14,8,0.15
+ORD-7358,2026-02-07,Mid-Market,North America,DevPulse Enterprise,2057.01,0.0,2057.01,7,0.29
+ORD-7359,2026-05-16,Mid-Market,North America,CI/CD Accelerator,4364.69,0.0,4364.69,8,0.27
+ORD-7360,2026-03-30,SMB,North America,CodeQuality AI,1142.0,0.2,913.6,8,0.16
+ORD-7361,2026-02-05,Mid-Market,EMEA,CodeQuality AI,9606.43,0.2,7685.14,9,0.24
+ORD-7362,2026-01-04,Mid-Market,North America,CodeQuality AI,7814.28,0.15,6642.14,7,0.15
+ORD-7363,2026-03-06,SMB,North America,DevPulse Enterprise,2010.12,0.0,2010.12,7,0.2
+ORD-7364,2026-03-16,Mid-Market,Asia Pacific,CI/CD Accelerator,9786.55,0.1,8807.9,9,0.05
+ORD-7365,2026-01-04,Mid-Market,Latin America,CI/CD Accelerator,10056.85,0.1,9051.17,8,0.18
+ORD-7366,2026-03-08,Mid-Market,Asia Pacific,CodeQuality AI,9224.01,0.05,8762.81,8,0.39
+ORD-7367,2026-06-01,Mid-Market,Latin America,DevPulse Enterprise,5391.57,0.1,4852.41,7,0.33
+ORD-7368,2026-03-09,SMB,North America,CI/CD Accelerator,1791.87,0.2,1433.5,9,0.25
+ORD-7369,2026-05-06,Mid-Market,North America,CodeQuality AI,5537.02,0.1,4983.32,9,0.05
+ORD-7370,2026-05-29,SMB,Asia Pacific,CI/CD Accelerator,763.53,0.05,725.35,8,0.17
+ORD-7371,2026-03-28,Mid-Market,Asia Pacific,CodeQuality AI,9200.66,0.05,8740.63,9,0.05
+ORD-7372,2026-02-28,Mid-Market,North America,CloudOps Monitor,8226.9,0.05,7815.55,7,0.34
+ORD-7373,2026-04-29,SMB,North America,DevPulse Enterprise,1736.1,0.0,1736.1,8,0.24
+ORD-7374,2026-05-18,Enterprise,Asia Pacific,CI/CD Accelerator,12036.03,0.0,12036.03,10,0.05
+ORD-7375,2026-05-07,Mid-Market,North America,CI/CD Accelerator,7490.43,0.05,7115.91,7,0.25
+ORD-7376,2026-01-05,Mid-Market,Asia Pacific,DevPulse Enterprise,9462.59,0.2,7570.07,8,0.26
+ORD-7377,2026-04-26,Enterprise,Latin America,CodeQuality AI,25385.19,0.05,24115.93,10,0.05
+ORD-7378,2026-04-02,Mid-Market,EMEA,DevPulse Enterprise,12680.03,0.0,12680.03,8,0.21
+ORD-7379,2026-02-18,Mid-Market,EMEA,CloudOps Monitor,9069.36,0.2,7255.49,8,0.36
+ORD-7380,2026-03-02,Enterprise,North America,CI/CD Accelerator,27368.89,0.0,27368.89,5,0.58
+ORD-7381,2026-05-27,Mid-Market,Latin America,CI/CD Accelerator,9042.53,0.15,7686.15,8,0.05
+ORD-7382,2026-04-07,Enterprise,North America,CodeQuality AI,14224.0,0.0,14224.0,8,0.39
+ORD-7383,2026-02-28,SMB,Latin America,CI/CD Accelerator,1056.85,0.15,898.32,10,0.05
+ORD-7384,2026-01-21,Mid-Market,Latin America,CodeQuality AI,8662.73,0.15,7363.32,8,0.2
+ORD-7385,2026-05-14,Mid-Market,North America,CI/CD Accelerator,6354.54,0.15,5401.36,7,0.29
+ORD-7386,2026-04-21,Enterprise,North America,DevPulse Enterprise,25232.92,0.15,21447.98,8,0.15
+ORD-7387,2026-05-30,Mid-Market,Asia Pacific,CodeQuality AI,10120.0,0.1,9108.0,8,0.16
+ORD-7388,2026-04-03,Mid-Market,North America,CloudOps Monitor,6486.8,0.1,5838.12,7,0.4
+ORD-7389,2026-01-07,Enterprise,North America,CloudOps Monitor,36993.13,0.0,36993.13,9,0.05
+ORD-7390,2026-05-12,SMB,EMEA,CodeQuality AI,1529.01,0.0,1529.01,7,0.17
+ORD-7391,2026-01-22,Mid-Market,North America,CodeQuality AI,7273.84,0.15,6182.76,8,0.12
+ORD-7392,2026-05-10,Mid-Market,North America,DevPulse Enterprise,8785.61,0.1,7907.05,10,0.05
+ORD-7393,2026-02-19,Enterprise,EMEA,CI/CD Accelerator,29522.11,0.15,25093.79,6,0.58
+ORD-7394,2026-01-02,Mid-Market,North America,DevPulse Enterprise,7684.63,0.1,6916.17,7,0.38
+ORD-7395,2026-05-19,SMB,North America,DevPulse Enterprise,1268.33,0.05,1204.91,5,0.53
+ORD-7396,2026-03-24,SMB,North America,CodeQuality AI,2210.18,0.1,1989.16,8,0.2
+ORD-7397,2026-05-29,Mid-Market,North America,CodeQuality AI,5251.49,0.15,4463.77,8,0.19
+ORD-7398,2026-03-26,Mid-Market,North America,CI/CD Accelerator,8128.25,0.2,6502.6,9,0.19
+ORD-7399,2026-05-13,Mid-Market,North America,CloudOps Monitor,10342.97,0.05,9825.82,10,0.05
+ORD-7400,2026-03-13,Mid-Market,EMEA,CI/CD Accelerator,5913.31,0.15,5026.31,7,0.23
+ORD-7401,2026-05-19,Mid-Market,EMEA,CodeQuality AI,10107.54,0.1,9096.79,8,0.34
+ORD-7402,2026-06-05,Enterprise,EMEA,CloudOps Monitor,26599.7,0.15,22609.74,8,0.25
+ORD-7403,2026-01-08,SMB,North America,CodeQuality AI,1026.48,0.2,821.18,9,0.12
+ORD-7404,2026-05-17,Enterprise,North America,CI/CD Accelerator,18663.85,0.15,15864.27,8,0.14
+ORD-7405,2026-06-06,Mid-Market,EMEA,DevPulse Enterprise,8085.12,0.2,6468.1,9,0.12
+ORD-7406,2026-02-17,Mid-Market,North America,CodeQuality AI,6097.48,0.15,5182.86,7,0.51
+ORD-7407,2026-02-11,Mid-Market,North America,CI/CD Accelerator,8653.94,0.0,8653.94,5,0.47
+ORD-7408,2026-05-18,Enterprise,North America,DevPulse Enterprise,27243.78,0.0,27243.78,7,0.32
+ORD-7409,2026-06-03,Enterprise,North America,DevPulse Enterprise,34085.58,0.15,28972.74,8,0.09
+ORD-7410,2026-02-06,Mid-Market,Latin America,DevPulse Enterprise,6029.4,0.1,5426.46,7,0.3
+ORD-7411,2026-02-06,Enterprise,EMEA,CI/CD Accelerator,28211.63,0.2,22569.3,7,0.4
+ORD-7412,2026-05-16,Mid-Market,Latin America,CI/CD Accelerator,5627.23,0.2,4501.78,7,0.33
+ORD-7413,2026-06-09,Enterprise,Asia Pacific,CodeQuality AI,25115.01,0.0,25115.01,8,0.2
+ORD-7414,2026-05-16,SMB,North America,CodeQuality AI,1699.11,0.2,1359.29,7,0.5
+ORD-7415,2026-01-29,Mid-Market,Asia Pacific,DevPulse Enterprise,6227.82,0.2,4982.26,8,0.32
+ORD-7416,2026-01-12,Mid-Market,Asia Pacific,CodeQuality AI,11411.47,0.1,10270.32,9,0.05
+ORD-7417,2026-02-17,SMB,North America,DevPulse Enterprise,2238.19,0.0,2238.19,8,0.22
+ORD-7418,2026-02-13,Enterprise,EMEA,CI/CD Accelerator,27928.75,0.1,25135.88,10,0.06
+ORD-7419,2026-03-13,Enterprise,North America,DevPulse Enterprise,13772.27,0.0,13772.27,8,0.13
+ORD-7420,2026-02-28,SMB,North America,CI/CD Accelerator,1994.66,0.15,1695.46,7,0.25
+ORD-7421,2026-04-16,Enterprise,EMEA,CloudOps Monitor,24232.56,0.05,23020.93,7,0.34
+ORD-7422,2026-01-31,Enterprise,North America,DevPulse Enterprise,30639.15,0.1,27575.24,7,0.34
+ORD-7423,2026-01-24,Enterprise,North America,CI/CD Accelerator,30572.1,0.05,29043.49,6,0.56
+ORD-7424,2026-03-29,SMB,North America,CloudOps Monitor,2018.45,0.2,1614.76,7,0.43
+ORD-7425,2026-05-09,Mid-Market,EMEA,CI/CD Accelerator,7614.73,0.0,7614.73,8,0.3
+ORD-7426,2026-04-14,Mid-Market,Asia Pacific,CI/CD Accelerator,8361.01,0.0,8361.01,8,0.1
+ORD-7427,2026-03-29,Mid-Market,EMEA,CI/CD Accelerator,5858.54,0.1,5272.69,7,0.38
+ORD-7428,2026-03-10,Enterprise,North America,CloudOps Monitor,33036.88,0.2,26429.5,8,0.18
+ORD-7429,2026-03-24,Mid-Market,EMEA,CloudOps Monitor,7902.35,0.2,6321.88,10,0.05
+ORD-7430,2026-04-28,SMB,North America,CloudOps Monitor,1554.15,0.0,1554.15,7,0.15
+ORD-7431,2026-01-17,Mid-Market,North America,DevPulse Enterprise,6972.74,0.1,6275.47,8,0.12
+ORD-7432,2026-02-14,Mid-Market,EMEA,CI/CD Accelerator,5394.53,0.05,5124.8,8,0.12
+ORD-7433,2026-01-05,Mid-Market,Latin America,CloudOps Monitor,7441.98,0.1,6697.78,8,0.38
+ORD-7434,2026-02-10,Enterprise,North America,CI/CD Accelerator,15914.67,0.15,13527.47,7,0.26
+ORD-7435,2026-05-31,SMB,EMEA,CodeQuality AI,1282.91,0.15,1090.47,10,0.06
+ORD-7436,2026-03-15,Mid-Market,North America,CI/CD Accelerator,7938.87,0.0,7938.87,6,0.63
+ORD-7437,2026-05-09,Enterprise,North America,DevPulse Enterprise,23549.88,0.15,20017.4,6,0.25
+ORD-7438,2026-04-17,Mid-Market,Asia Pacific,CloudOps Monitor,7675.07,0.1,6907.56,8,0.12
+ORD-7439,2026-02-22,SMB,Latin America,DevPulse Enterprise,1587.2,0.15,1349.12,8,0.35
+ORD-7440,2026-01-27,Mid-Market,Asia Pacific,CloudOps Monitor,6256.96,0.0,6256.96,6,0.42
+ORD-7441,2026-03-17,SMB,EMEA,DevPulse Enterprise,1135.66,0.15,965.31,9,0.21
+ORD-7442,2026-02-27,SMB,Latin America,DevPulse Enterprise,1802.16,0.05,1712.05,8,0.17
+ORD-7443,2026-02-24,Enterprise,North America,DevPulse Enterprise,23336.64,0.1,21002.98,10,0.05
+ORD-7444,2026-01-21,SMB,Asia Pacific,CodeQuality AI,1358.7,0.2,1086.96,8,0.17
+ORD-7445,2026-05-13,Enterprise,Latin America,CloudOps Monitor,24770.63,0.05,23532.1,8,0.23
+ORD-7446,2026-01-10,Mid-Market,Latin America,CodeQuality AI,7901.46,0.0,7901.46,8,0.32
+ORD-7447,2026-05-14,Mid-Market,EMEA,CodeQuality AI,9548.68,0.2,7638.94,8,0.27
+ORD-7448,2026-03-25,Mid-Market,North America,CloudOps Monitor,7289.76,0.1,6560.78,9,0.05
+ORD-7449,2026-03-05,SMB,Asia Pacific,CI/CD Accelerator,1406.48,0.2,1125.18,6,0.3
+ORD-7450,2026-02-13,Mid-Market,North America,CodeQuality AI,5650.55,0.15,4802.97,8,0.05
+ORD-7451,2026-03-11,Enterprise,Asia Pacific,CloudOps Monitor,26089.55,0.15,22176.12,9,0.05
+ORD-7452,2026-02-21,Enterprise,Asia Pacific,CloudOps Monitor,23093.86,0.0,23093.86,8,0.2
+ORD-7453,2026-02-15,Enterprise,North America,CI/CD Accelerator,25540.17,0.1,22986.15,7,0.44
+ORD-7454,2026-05-11,Enterprise,EMEA,CI/CD Accelerator,29059.86,0.0,29059.86,7,0.36
+ORD-7455,2026-05-06,Mid-Market,North America,CI/CD Accelerator,8786.04,0.15,7468.13,8,0.3
+ORD-7456,2026-04-09,Mid-Market,Asia Pacific,CodeQuality AI,6173.98,0.0,6173.98,9,0.08
+ORD-7457,2026-02-27,Mid-Market,Asia Pacific,DevPulse Enterprise,7994.95,0.2,6395.96,6,0.37
+ORD-7458,2026-01-19,Enterprise,North America,CodeQuality AI,30763.92,0.15,26149.33,8,0.24
+ORD-7459,2026-01-20,SMB,Latin America,CodeQuality AI,1757.88,0.15,1494.2,8,0.25
+ORD-7460,2026-05-09,Enterprise,EMEA,DevPulse Enterprise,22036.67,0.0,22036.67,7,0.21
+ORD-7461,2026-02-02,SMB,North America,CodeQuality AI,2671.46,0.0,2671.46,10,0.19
+ORD-7462,2026-05-08,Enterprise,EMEA,CodeQuality AI,18208.72,0.2,14566.98,8,0.27
+ORD-7463,2026-03-24,SMB,EMEA,CodeQuality AI,1083.55,0.1,975.19,9,0.05
+ORD-7464,2026-06-01,SMB,North America,CI/CD Accelerator,2164.91,0.0,2164.91,9,0.05
+ORD-7465,2026-05-16,Mid-Market,EMEA,CI/CD Accelerator,5762.02,0.0,5762.02,10,0.05
+ORD-7466,2026-04-04,SMB,North America,CloudOps Monitor,1574.36,0.15,1338.21,7,0.25
+ORD-7467,2026-05-05,SMB,Asia Pacific,CodeQuality AI,1233.28,0.15,1048.29,7,0.25
+ORD-7468,2026-02-18,Enterprise,North America,CodeQuality AI,11989.76,0.2,9591.81,6,0.56
+ORD-7469,2026-04-23,SMB,Latin America,DevPulse Enterprise,1863.5,0.1,1677.15,6,0.4
+ORD-7470,2026-04-10,SMB,EMEA,CodeQuality AI,1406.38,0.05,1336.06,7,0.31
+ORD-7471,2026-05-06,Enterprise,EMEA,DevPulse Enterprise,34548.42,0.2,27638.74,9,0.05
+ORD-7472,2026-03-09,Mid-Market,North America,CloudOps Monitor,8509.15,0.2,6807.32,7,0.37
+ORD-7473,2026-04-22,Mid-Market,EMEA,CodeQuality AI,7660.91,0.0,7660.91,8,0.35
+ORD-7474,2026-04-11,SMB,Asia Pacific,CI/CD Accelerator,1308.15,0.0,1308.15,6,0.33
+ORD-7475,2026-05-14,Enterprise,North America,CI/CD Accelerator,38094.65,0.1,34285.19,9,0.07
+ORD-7476,2026-04-02,Enterprise,North America,CloudOps Monitor,20089.88,0.05,19085.39,8,0.39
+ORD-7477,2026-02-26,Mid-Market,North America,CI/CD Accelerator,8844.87,0.2,7075.9,7,0.39
+ORD-7478,2026-01-22,SMB,North America,CodeQuality AI,2742.01,0.0,2742.01,8,0.19
+ORD-7479,2026-01-03,Mid-Market,Asia Pacific,CodeQuality AI,7741.79,0.1,6967.61,8,0.1
+ORD-7480,2026-01-25,Mid-Market,Asia Pacific,DevPulse Enterprise,4831.99,0.15,4107.19,7,0.43
+ORD-7481,2026-01-01,Mid-Market,North America,CloudOps Monitor,4541.32,0.1,4087.19,8,0.31
+ORD-7482,2026-01-27,Enterprise,Asia Pacific,CodeQuality AI,26385.17,0.0,26385.17,8,0.3
+ORD-7483,2026-02-10,Enterprise,EMEA,CloudOps Monitor,29718.21,0.0,29718.21,8,0.1
+ORD-7484,2026-06-05,Enterprise,Asia Pacific,DevPulse Enterprise,28705.27,0.1,25834.74,9,0.05
+ORD-7485,2026-05-14,Mid-Market,North America,CI/CD Accelerator,5515.81,0.0,5515.81,8,0.17
+ORD-7486,2026-02-19,Mid-Market,North America,CI/CD Accelerator,4888.4,0.15,4155.14,9,0.19
+ORD-7487,2026-01-16,Mid-Market,North America,CI/CD Accelerator,6502.63,0.15,5527.24,10,0.1
+ORD-7488,2026-04-26,SMB,Asia Pacific,CloudOps Monitor,1712.44,0.0,1712.44,7,0.42
+ORD-7489,2026-04-12,Mid-Market,Asia Pacific,CloudOps Monitor,7167.46,0.0,7167.46,8,0.18
+ORD-7490,2026-05-04,SMB,Latin America,CodeQuality AI,1321.16,0.2,1056.93,6,0.25
+ORD-7491,2026-01-14,Mid-Market,Asia Pacific,DevPulse Enterprise,10469.34,0.05,9945.87,8,0.1
+ORD-7492,2026-05-05,Mid-Market,North America,CodeQuality AI,7659.32,0.0,7659.32,9,0.06
+ORD-7493,2026-02-25,Mid-Market,EMEA,DevPulse Enterprise,8900.88,0.15,7565.75,8,0.28
+ORD-7494,2026-05-04,SMB,EMEA,DevPulse Enterprise,1833.61,0.2,1466.89,8,0.09
+ORD-7495,2026-05-17,Mid-Market,North America,CodeQuality AI,9384.67,0.0,9384.67,8,0.29
+ORD-7496,2026-02-04,SMB,North America,CodeQuality AI,1262.61,0.1,1136.35,9,0.05
+ORD-7497,2026-05-27,SMB,EMEA,DevPulse Enterprise,2308.74,0.2,1846.99,8,0.09
+ORD-7498,2026-01-08,Mid-Market,North America,DevPulse Enterprise,5963.83,0.15,5069.26,6,0.59
+ORD-7499,2026-04-10,Mid-Market,North America,CI/CD Accelerator,9259.55,0.2,7407.64,8,0.09
+ORD-7500,2026-04-11,SMB,EMEA,CodeQuality AI,2127.24,0.2,1701.79,6,0.25

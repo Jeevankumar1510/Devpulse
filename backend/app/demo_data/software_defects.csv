@@ -1,0 +1,251 @@
+defect_id,title,severity,component,environment,detected_at,resolved_at,resolution_time_hours,root_cause,escape_defect,status
+BUG-2001,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,QA,2026-03-18 12:00:00,2026-03-19 07:42:00,19.7,Third-Party API Outage,No,Closed
+BUG-2002,Issue in Billing & Checkout: Concurrency/Race Con,Medium,Billing & Checkout,Production,2026-01-05 12:00:00,2026-01-06 03:54:00,15.9,Concurrency/Race Condition,No,Closed
+BUG-2003,Issue in API Gateway: Third-Party API Outa,Medium,API Gateway,Staging,2026-01-30 06:00:00,2026-01-30 22:18:00,16.3,Third-Party API Outage,Yes,Closed
+BUG-2004,Issue in Notification Service: Unhandled Null/Missi,Medium,Notification Service,Production,2026-05-01 18:00:00,2026-05-06 01:48:00,103.8,Unhandled Null/Missing Value,No,Closed
+BUG-2005,Issue in Notification Service: Unhandled Null/Missi,Medium,Notification Service,Staging,2026-03-25 12:00:00,2026-04-05 23:00:00,275.0,Unhandled Null/Missing Value,No,Closed
+BUG-2006,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Production,2026-03-24 14:00:00,2026-03-24 15:18:00,1.3,Schema Incompatibility,No,Closed
+BUG-2007,Issue in Notification Service: Input Validation Err,Critical,Notification Service,QA,2026-03-01 13:00:00,2026-03-01 18:42:00,5.7,Input Validation Error,Yes,Closed
+BUG-2008,Issue in Billing & Checkout: Unhandled Null/Missi,High,Billing & Checkout,Production,2026-04-19 12:00:00,2026-04-19 14:18:00,2.3,Unhandled Null/Missing Value,No,Closed
+BUG-2009,Issue in Notification Service: Unhandled Null/Missi,High,Notification Service,QA,2026-02-09 05:00:00,2026-02-09 08:24:00,3.4,Unhandled Null/Missing Value,No,Closed
+BUG-2010,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,QA,2026-03-16 07:00:00,2026-03-17 07:18:00,24.3,Schema Incompatibility,No,Closed
+BUG-2011,Issue in Billing & Checkout: Database Index Lock,Medium,Billing & Checkout,Production,2026-05-27 07:00:00,2026-05-27 11:54:00,4.9,Database Index Lock,No,Closed
+BUG-2012,Issue in API Gateway: Unhandled Null/Missi,Medium,API Gateway,Staging,2026-01-25 19:00:00,2026-01-28 13:00:00,66.0,Unhandled Null/Missing Value,No,Closed
+BUG-2013,Issue in Authentication: Schema Incompatibili,High,Authentication,QA,2026-02-07 00:00:00,2026-02-07 21:00:00,21.0,Schema Incompatibility,No,Closed
+BUG-2014,Issue in Billing & Checkout: Schema Incompatibili,Medium,Billing & Checkout,QA,2026-03-21 14:00:00,2026-03-21 19:06:00,5.1,Schema Incompatibility,No,Closed
+BUG-2015,Issue in Authentication: Unhandled Null/Missi,Low,Authentication,Staging,2026-02-01 21:00:00,2026-02-03 19:36:00,46.6,Unhandled Null/Missing Value,Yes,Closed
+BUG-2016,Issue in Notification Service: Input Validation Err,Medium,Notification Service,Staging,2026-03-06 15:00:00,2026-03-11 19:30:00,124.5,Input Validation Error,No,Closed
+BUG-2017,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,QA,2026-05-21 09:00:00,2026-05-22 15:12:00,30.2,Database Index Lock,Yes,Closed
+BUG-2018,Issue in Analytics UI: Database Index Lock,Critical,Analytics UI,Staging,2026-02-15 21:00:00,2026-02-16 03:30:00,6.5,Database Index Lock,No,Closed
+BUG-2019,Issue in Authentication: Schema Incompatibili,High,Authentication,QA,2026-01-03 19:00:00,2026-01-04 01:30:00,6.5,Schema Incompatibility,Yes,Closed
+BUG-2020,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,Production,2026-05-24 23:00:00,2026-05-26 05:00:00,30.0,Concurrency/Race Condition,No,Closed
+BUG-2021,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Production,2026-01-30 17:00:00,2026-01-31 08:18:00,15.3,Schema Incompatibility,Yes,Closed
+BUG-2022,Issue in Search & Indexer: Unhandled Null/Missi,Critical,Search & Indexer,Staging,2026-02-25 04:00:00,2026-02-25 12:06:00,8.1,Unhandled Null/Missing Value,No,Closed
+BUG-2023,Issue in Billing & Checkout: Concurrency/Race Con,Critical,Billing & Checkout,QA,2026-03-12 09:00:00,2026-03-12 16:30:00,7.5,Concurrency/Race Condition,No,Closed
+BUG-2024,Issue in Search & Indexer: Concurrency/Race Con,High,Search & Indexer,Production,2026-03-09 15:00:00,2026-03-09 21:24:00,6.4,Concurrency/Race Condition,No,Closed
+BUG-2025,Issue in Authentication: Database Index Lock,Low,Authentication,Production,2026-03-27 16:00:00,2026-03-30 06:06:00,62.1,Database Index Lock,No,Closed
+BUG-2026,Issue in API Gateway: Unhandled Null/Missi,Medium,API Gateway,Staging,2026-04-21 12:00:00,2026-04-23 10:48:00,46.8,Unhandled Null/Missing Value,No,Closed
+BUG-2027,Issue in Search & Indexer: Concurrency/Race Con,High,Search & Indexer,Staging,2026-02-11 08:00:00,2026-02-11 15:54:00,7.9,Concurrency/Race Condition,No,Closed
+BUG-2028,Issue in Billing & Checkout: Third-Party API Outa,High,Billing & Checkout,Production,2026-04-15 10:00:00,2026-04-15 16:18:00,6.3,Third-Party API Outage,Yes,Closed
+BUG-2029,Issue in Search & Indexer: Concurrency/Race Con,Critical,Search & Indexer,Staging,2026-05-14 11:00:00,2026-05-14 13:42:00,2.7,Concurrency/Race Condition,No,Closed
+BUG-2030,Issue in API Gateway: Concurrency/Race Con,Critical,API Gateway,Production,2026-02-09 02:00:00,2026-02-09 10:36:00,8.6,Concurrency/Race Condition,No,Closed
+BUG-2031,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,Staging,2026-05-14 05:00:00,2026-05-16 23:54:00,66.9,Schema Incompatibility,Yes,Closed
+BUG-2032,Issue in Notification Service: Input Validation Err,Medium,Notification Service,Staging,2026-05-24 14:00:00,2026-05-25 15:00:00,25.0,Input Validation Error,No,Closed
+BUG-2033,Issue in Authentication: Database Index Lock,High,Authentication,Staging,2026-04-26 12:00:00,2026-04-27 05:12:00,17.2,Database Index Lock,No,Closed
+BUG-2034,Issue in Notification Service: Schema Incompatibili,Medium,Notification Service,Staging,2026-04-07 18:00:00,2026-04-10 20:00:00,74.0,Schema Incompatibility,No,Closed
+BUG-2035,Issue in Notification Service: Concurrency/Race Con,Critical,Notification Service,Staging,2026-04-02 14:00:00,2026-04-03 04:06:00,14.1,Concurrency/Race Condition,No,Closed
+BUG-2036,Issue in Authentication: Concurrency/Race Con,Medium,Authentication,Production,2026-04-06 08:00:00,2026-04-08 15:48:00,55.8,Concurrency/Race Condition,Yes,Closed
+BUG-2037,Issue in Authentication: Schema Incompatibili,Medium,Authentication,Production,2026-04-05 21:00:00,2026-04-06 02:00:00,5.0,Schema Incompatibility,No,Closed
+BUG-2038,Issue in API Gateway: Third-Party API Outa,Low,API Gateway,Staging,2026-04-21 07:00:00,2026-04-22 01:48:00,18.8,Third-Party API Outage,No,Closed
+BUG-2039,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,Staging,2026-01-19 12:00:00,2026-01-21 07:12:00,43.2,Concurrency/Race Condition,No,Closed
+BUG-2040,Issue in Billing & Checkout: Input Validation Err,Medium,Billing & Checkout,Production,2026-04-15 08:00:00,2026-04-15 17:36:00,9.6,Input Validation Error,No,Closed
+BUG-2041,Issue in Analytics UI: Unhandled Null/Missi,Medium,Analytics UI,Production,2026-02-24 18:00:00,2026-02-25 10:42:00,16.7,Unhandled Null/Missing Value,No,Closed
+BUG-2042,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,Production,2026-04-12 15:00:00,2026-04-14 21:06:00,54.1,Database Index Lock,No,Closed
+BUG-2043,Issue in Search & Indexer: Third-Party API Outa,Critical,Search & Indexer,Production,2026-01-24 19:00:00,2026-01-26 04:06:00,33.1,Third-Party API Outage,No,Closed
+BUG-2044,Issue in Analytics UI: Input Validation Err,Critical,Analytics UI,Staging,2026-01-29 18:00:00,2026-01-30 13:00:00,19.0,Input Validation Error,No,Closed
+BUG-2045,Issue in API Gateway: Unhandled Null/Missi,High,API Gateway,Staging,2026-02-12 06:00:00,2026-02-12 11:00:00,5.0,Unhandled Null/Missing Value,No,Closed
+BUG-2046,Issue in Analytics UI: Third-Party API Outa,Medium,Analytics UI,Production,2026-04-01 07:00:00,2026-04-02 01:48:00,18.8,Third-Party API Outage,No,Closed
+BUG-2047,Issue in Notification Service: Input Validation Err,Low,Notification Service,Staging,2026-01-08 08:00:00,2026-01-13 00:30:00,112.5,Input Validation Error,No,Closed
+BUG-2048,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,Staging,2026-05-11 15:00:00,2026-05-12 06:24:00,15.4,Unhandled Null/Missing Value,No,Closed
+BUG-2049,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,Staging,2026-05-19 16:00:00,2026-05-24 19:48:00,123.8,Unhandled Null/Missing Value,No,Closed
+BUG-2050,Issue in Notification Service: Unhandled Null/Missi,Medium,Notification Service,Staging,2026-03-29 01:00:00,2026-04-01 17:48:00,88.8,Unhandled Null/Missing Value,No,Closed
+BUG-2051,Issue in Analytics UI: Unhandled Null/Missi,High,Analytics UI,Staging,2026-05-14 21:00:00,2026-05-15 12:36:00,15.6,Unhandled Null/Missing Value,No,Closed
+BUG-2052,Issue in Search & Indexer: Unhandled Null/Missi,Low,Search & Indexer,QA,2026-01-29 08:00:00,2026-01-30 10:06:00,26.1,Unhandled Null/Missing Value,No,Closed
+BUG-2053,Issue in Analytics UI: Database Index Lock,High,Analytics UI,QA,2026-04-18 17:00:00,2026-04-19 05:24:00,12.4,Database Index Lock,No,Closed
+BUG-2054,Issue in API Gateway: Unhandled Null/Missi,Low,API Gateway,Production,2026-03-29 14:00:00,2026-04-05 07:24:00,161.4,Unhandled Null/Missing Value,No,Closed
+BUG-2055,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,QA,2026-01-26 14:00:00,2026-01-26 20:12:00,6.2,Unhandled Null/Missing Value,No,Closed
+BUG-2056,Issue in Authentication: Schema Incompatibili,High,Authentication,QA,2026-05-03 21:00:00,2026-05-04 01:18:00,4.3,Schema Incompatibility,Yes,Closed
+BUG-2057,Issue in Notification Service: Schema Incompatibili,Medium,Notification Service,Staging,2026-01-01 18:00:00,2026-01-02 14:42:00,20.7,Schema Incompatibility,No,Closed
+BUG-2058,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Production,2026-01-04 14:00:00,2026-01-04 23:54:00,9.9,Schema Incompatibility,No,Closed
+BUG-2059,Issue in Authentication: Concurrency/Race Con,Medium,Authentication,Staging,2026-03-25 22:00:00,2026-03-27 02:30:00,28.5,Concurrency/Race Condition,No,Closed
+BUG-2060,Issue in Authentication: Input Validation Err,Medium,Authentication,QA,2026-04-08 14:00:00,2026-04-10 03:30:00,37.5,Input Validation Error,No,Closed
+BUG-2061,Issue in Search & Indexer: Concurrency/Race Con,Medium,Search & Indexer,Staging,2026-04-24 03:00:00,2026-04-28 15:18:00,108.3,Concurrency/Race Condition,No,Closed
+BUG-2062,Issue in Analytics UI: Unhandled Null/Missi,Medium,Analytics UI,Production,2026-03-21 03:00:00,2026-03-21 17:12:00,14.2,Unhandled Null/Missing Value,No,Closed
+BUG-2063,Issue in Billing & Checkout: Database Index Lock,Medium,Billing & Checkout,Staging,2026-03-29 02:00:00,2026-03-29 07:12:00,5.2,Database Index Lock,Yes,Closed
+BUG-2064,Issue in API Gateway: Unhandled Null/Missi,Medium,API Gateway,QA,2026-03-17 13:00:00,2026-03-18 13:24:00,24.4,Unhandled Null/Missing Value,No,Closed
+BUG-2065,Issue in Authentication: Unhandled Null/Missi,Low,Authentication,Staging,2026-03-07 20:00:00,2026-03-12 11:48:00,111.8,Unhandled Null/Missing Value,Yes,Closed
+BUG-2066,Issue in Analytics UI: Input Validation Err,Critical,Analytics UI,QA,2026-03-09 18:00:00,2026-03-10 05:48:00,11.8,Input Validation Error,No,Closed
+BUG-2067,Issue in Billing & Checkout: Third-Party API Outa,Medium,Billing & Checkout,Production,2026-03-26 10:00:00,2026-04-03 20:24:00,202.4,Third-Party API Outage,Yes,Closed
+BUG-2068,Issue in API Gateway: Unhandled Null/Missi,High,API Gateway,Staging,2026-05-01 03:00:00,2026-05-01 10:24:00,7.4,Unhandled Null/Missing Value,No,Closed
+BUG-2069,Issue in Notification Service: Schema Incompatibili,Low,Notification Service,Staging,2026-03-27 04:00:00,2026-03-28 16:42:00,36.7,Schema Incompatibility,No,Closed
+BUG-2070,Issue in Billing & Checkout: Third-Party API Outa,Medium,Billing & Checkout,Staging,2026-03-02 18:00:00,2026-03-02 20:48:00,2.8,Third-Party API Outage,No,Closed
+BUG-2071,Issue in API Gateway: Database Index Lock,High,API Gateway,QA,2026-03-04 14:00:00,2026-03-04 22:00:00,8.0,Database Index Lock,No,Closed
+BUG-2072,Issue in API Gateway: Schema Incompatibili,High,API Gateway,Staging,2026-04-09 09:00:00,2026-04-11 11:00:00,50.0,Schema Incompatibility,Yes,Closed
+BUG-2073,Issue in API Gateway: Unhandled Null/Missi,Medium,API Gateway,Staging,2026-04-05 16:00:00,2026-04-07 00:30:00,32.5,Unhandled Null/Missing Value,No,Closed
+BUG-2074,Issue in API Gateway: Input Validation Err,Critical,API Gateway,Staging,2026-04-09 00:00:00,2026-04-09 14:30:00,14.5,Input Validation Error,No,Closed
+BUG-2075,Issue in Search & Indexer: Concurrency/Race Con,High,Search & Indexer,Production,2026-05-14 00:00:00,2026-05-14 07:30:00,7.5,Concurrency/Race Condition,No,Closed
+BUG-2076,Issue in Authentication: Database Index Lock,Critical,Authentication,Staging,2026-03-24 20:00:00,2026-03-25 00:18:00,4.3,Database Index Lock,No,Closed
+BUG-2077,Issue in Notification Service: Unhandled Null/Missi,High,Notification Service,Staging,2026-05-04 09:00:00,2026-05-04 10:30:00,1.5,Unhandled Null/Missing Value,Yes,Closed
+BUG-2078,Issue in Billing & Checkout: Concurrency/Race Con,High,Billing & Checkout,Staging,2026-04-28 15:00:00,2026-04-30 02:00:00,35.0,Concurrency/Race Condition,No,Closed
+BUG-2079,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,Staging,2026-02-04 00:00:00,2026-02-09 13:42:00,133.7,Database Index Lock,No,Closed
+BUG-2080,Issue in Authentication: Concurrency/Race Con,High,Authentication,Staging,2026-02-03 06:00:00,2026-02-03 11:06:00,5.1,Concurrency/Race Condition,Yes,Closed
+BUG-2081,Issue in Search & Indexer: Schema Incompatibili,Critical,Search & Indexer,Production,2026-05-25 15:00:00,2026-05-25 21:42:00,6.7,Schema Incompatibility,No,Closed
+BUG-2082,Issue in Billing & Checkout: Third-Party API Outa,High,Billing & Checkout,Production,2026-02-27 21:00:00,2026-02-28 02:18:00,5.3,Third-Party API Outage,No,Closed
+BUG-2083,Issue in Authentication: Unhandled Null/Missi,High,Authentication,Production,2026-02-28 14:00:00,2026-03-01 12:24:00,22.4,Unhandled Null/Missing Value,No,Closed
+BUG-2084,Issue in Authentication: Third-Party API Outa,Medium,Authentication,Staging,2026-04-03 20:00:00,2026-04-06 07:12:00,59.2,Third-Party API Outage,No,Closed
+BUG-2085,Issue in Authentication: Unhandled Null/Missi,High,Authentication,Production,2026-04-24 23:00:00,2026-04-25 00:36:00,1.6,Unhandled Null/Missing Value,No,Closed
+BUG-2086,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,QA,2026-05-11 02:00:00,2026-05-14 07:42:00,77.7,Third-Party API Outage,No,Closed
+BUG-2087,Issue in Search & Indexer: Schema Incompatibili,Critical,Search & Indexer,Production,2026-02-17 07:00:00,2026-02-17 09:36:00,2.6,Schema Incompatibility,Yes,Closed
+BUG-2088,Issue in Analytics UI: Database Index Lock,High,Analytics UI,Production,2026-02-27 11:00:00,2026-02-27 12:30:00,1.5,Database Index Lock,No,Closed
+BUG-2089,Issue in Search & Indexer: Third-Party API Outa,Medium,Search & Indexer,Production,2026-02-17 08:00:00,2026-02-19 18:12:00,58.2,Third-Party API Outage,No,Closed
+BUG-2090,Issue in Billing & Checkout: Third-Party API Outa,Critical,Billing & Checkout,Staging,2026-03-14 03:00:00,2026-03-14 14:48:00,11.8,Third-Party API Outage,No,Closed
+BUG-2091,Issue in Authentication: Unhandled Null/Missi,Medium,Authentication,Staging,2026-01-09 06:00:00,2026-01-13 10:18:00,100.3,Unhandled Null/Missing Value,No,Closed
+BUG-2092,Issue in Search & Indexer: Third-Party API Outa,Low,Search & Indexer,Staging,2026-02-11 12:00:00,2026-02-20 15:42:00,219.7,Third-Party API Outage,No,Closed
+BUG-2093,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,Production,2026-05-20 02:00:00,2026-05-26 09:06:00,151.1,Third-Party API Outage,No,Closed
+BUG-2094,Issue in Billing & Checkout: Concurrency/Race Con,Critical,Billing & Checkout,Production,2026-05-08 21:00:00,2026-05-08 23:54:00,2.9,Concurrency/Race Condition,Yes,Closed
+BUG-2095,Issue in API Gateway: Database Index Lock,High,API Gateway,QA,2026-03-28 09:00:00,2026-04-01 16:18:00,103.3,Database Index Lock,No,Closed
+BUG-2096,Issue in Search & Indexer: Database Index Lock,Low,Search & Indexer,Production,2026-02-24 11:00:00,2026-02-24 17:54:00,6.9,Database Index Lock,Yes,Closed
+BUG-2097,Issue in Authentication: Input Validation Err,High,Authentication,QA,2026-04-04 20:00:00,2026-04-06 14:54:00,42.9,Input Validation Error,Yes,Closed
+BUG-2098,Issue in Analytics UI: Input Validation Err,Low,Analytics UI,Staging,2026-03-10 13:00:00,2026-03-11 03:00:00,14.0,Input Validation Error,No,Closed
+BUG-2099,Issue in API Gateway: Concurrency/Race Con,High,API Gateway,Staging,2026-04-24 20:00:00,2026-04-26 09:54:00,37.9,Concurrency/Race Condition,No,Closed
+BUG-2100,Issue in Billing & Checkout: Third-Party API Outa,High,Billing & Checkout,Staging,2026-01-31 15:00:00,2026-02-02 08:00:00,41.0,Third-Party API Outage,Yes,Closed
+BUG-2101,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,QA,2026-04-26 08:00:00,2026-04-27 17:18:00,33.3,Database Index Lock,No,Closed
+BUG-2102,Issue in Authentication: Third-Party API Outa,High,Authentication,Staging,2026-02-28 23:00:00,2026-03-01 03:24:00,4.4,Third-Party API Outage,No,Closed
+BUG-2103,Issue in Billing & Checkout: Schema Incompatibili,Medium,Billing & Checkout,Production,2026-04-02 16:00:00,2026-04-04 15:12:00,47.2,Schema Incompatibility,Yes,Closed
+BUG-2104,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,Production,2026-04-09 17:00:00,2026-04-10 17:36:00,24.6,Concurrency/Race Condition,Yes,Closed
+BUG-2105,Issue in API Gateway: Unhandled Null/Missi,Medium,API Gateway,QA,2026-03-18 12:00:00,2026-03-20 07:30:00,43.5,Unhandled Null/Missing Value,Yes,Closed
+BUG-2106,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,Staging,2026-04-02 12:00:00,2026-04-04 08:24:00,44.4,Schema Incompatibility,Yes,Closed
+BUG-2107,Issue in API Gateway: Database Index Lock,Critical,API Gateway,Staging,2026-04-25 08:00:00,2026-04-25 09:30:00,1.5,Database Index Lock,No,Closed
+BUG-2108,Issue in Notification Service: Third-Party API Outa,High,Notification Service,QA,2026-04-29 12:00:00,2026-05-01 09:54:00,45.9,Third-Party API Outage,No,Closed
+BUG-2109,Issue in Notification Service: Third-Party API Outa,Low,Notification Service,Production,2026-01-18 22:00:00,2026-01-18 23:12:00,1.2,Third-Party API Outage,No,Closed
+BUG-2110,Issue in API Gateway: Database Index Lock,Low,API Gateway,Production,2026-03-01 19:00:00,2026-03-10 13:54:00,210.9,Database Index Lock,No,Closed
+BUG-2111,Issue in Notification Service: Schema Incompatibili,Medium,Notification Service,Production,2026-05-22 14:00:00,2026-05-23 17:06:00,27.1,Schema Incompatibility,No,Closed
+BUG-2112,Issue in Notification Service: Concurrency/Race Con,Medium,Notification Service,QA,2026-01-11 20:00:00,2026-01-12 00:12:00,4.2,Concurrency/Race Condition,No,Closed
+BUG-2113,Issue in API Gateway: Schema Incompatibili,High,API Gateway,Production,2026-05-08 19:00:00,2026-05-09 08:48:00,13.8,Schema Incompatibility,No,Closed
+BUG-2114,Issue in Authentication: Unhandled Null/Missi,Medium,Authentication,Production,2026-02-13 13:00:00,2026-02-14 04:30:00,15.5,Unhandled Null/Missing Value,No,Closed
+BUG-2115,Issue in Billing & Checkout: Concurrency/Race Con,High,Billing & Checkout,Production,2026-05-07 18:00:00,2026-05-08 09:00:00,15.0,Concurrency/Race Condition,No,Closed
+BUG-2116,Issue in API Gateway: Concurrency/Race Con,Medium,API Gateway,Staging,2026-05-24 07:00:00,2026-05-27 01:12:00,66.2,Concurrency/Race Condition,No,Closed
+BUG-2117,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,QA,2026-02-22 06:00:00,2026-02-23 00:42:00,18.7,Database Index Lock,No,Closed
+BUG-2118,Issue in Search & Indexer: Unhandled Null/Missi,Critical,Search & Indexer,Staging,2026-01-16 11:00:00,2026-01-16 12:24:00,1.4,Unhandled Null/Missing Value,No,Closed
+BUG-2119,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,Staging,2026-02-16 21:00:00,2026-02-18 06:18:00,33.3,Concurrency/Race Condition,Yes,Closed
+BUG-2120,Issue in API Gateway: Schema Incompatibili,High,API Gateway,QA,2026-04-11 06:00:00,2026-04-12 17:42:00,35.7,Schema Incompatibility,Yes,Closed
+BUG-2121,Issue in Notification Service: Concurrency/Race Con,Critical,Notification Service,Staging,2026-05-06 00:00:00,2026-05-07 07:30:00,31.5,Concurrency/Race Condition,No,Closed
+BUG-2122,Issue in Authentication: Database Index Lock,High,Authentication,Staging,2026-02-20 14:00:00,2026-02-21 13:30:00,23.5,Database Index Lock,No,Closed
+BUG-2123,Issue in Analytics UI: Third-Party API Outa,Medium,Analytics UI,QA,2026-01-17 20:00:00,2026-01-18 18:24:00,22.4,Third-Party API Outage,No,Closed
+BUG-2124,Issue in API Gateway: Unhandled Null/Missi,Low,API Gateway,Staging,2026-02-08 04:00:00,2026-02-08 20:24:00,16.4,Unhandled Null/Missing Value,No,Closed
+BUG-2125,Issue in Notification Service: Third-Party API Outa,High,Notification Service,Staging,2026-03-17 22:00:00,2026-03-18 03:06:00,5.1,Third-Party API Outage,No,Closed
+BUG-2126,Issue in Authentication: Database Index Lock,Critical,Authentication,QA,2026-01-04 20:00:00,2026-01-05 06:06:00,10.1,Database Index Lock,No,Closed
+BUG-2127,Issue in Authentication: Database Index Lock,Critical,Authentication,QA,2026-02-06 09:00:00,2026-02-06 13:06:00,4.1,Database Index Lock,Yes,Closed
+BUG-2128,Issue in Search & Indexer: Concurrency/Race Con,Medium,Search & Indexer,Staging,2026-05-28 04:00:00,2026-05-28 11:36:00,7.6,Concurrency/Race Condition,No,Closed
+BUG-2129,Issue in Search & Indexer: Input Validation Err,High,Search & Indexer,Staging,2026-05-20 11:00:00,2026-05-23 23:42:00,84.7,Input Validation Error,No,Closed
+BUG-2130,Issue in Analytics UI: Unhandled Null/Missi,Critical,Analytics UI,QA,2026-01-15 09:00:00,2026-01-15 17:12:00,8.2,Unhandled Null/Missing Value,No,Closed
+BUG-2131,Issue in Authentication: Third-Party API Outa,High,Authentication,Production,2026-02-26 23:00:00,2026-02-28 13:42:00,38.7,Third-Party API Outage,No,Closed
+BUG-2132,Issue in Notification Service: Database Index Lock,Medium,Notification Service,Production,2026-03-21 08:00:00,2026-03-22 08:36:00,24.6,Database Index Lock,No,Closed
+BUG-2133,Issue in Notification Service: Input Validation Err,Low,Notification Service,Production,2026-02-12 20:00:00,2026-02-13 15:12:00,19.2,Input Validation Error,No,Closed
+BUG-2134,Issue in API Gateway: Database Index Lock,High,API Gateway,Staging,2026-03-14 03:00:00,2026-03-14 10:00:00,7.0,Database Index Lock,No,Closed
+BUG-2135,Issue in Authentication: Concurrency/Race Con,Low,Authentication,Production,2026-03-10 14:00:00,2026-03-15 01:36:00,107.6,Concurrency/Race Condition,No,Closed
+BUG-2136,Issue in Notification Service: Database Index Lock,Medium,Notification Service,Staging,2026-02-14 10:00:00,2026-02-15 23:12:00,37.2,Database Index Lock,No,Closed
+BUG-2137,Issue in Billing & Checkout: Third-Party API Outa,Medium,Billing & Checkout,Staging,2026-01-26 22:00:00,2026-01-30 10:12:00,84.2,Third-Party API Outage,No,Closed
+BUG-2138,Issue in API Gateway: Concurrency/Race Con,Medium,API Gateway,Staging,2026-03-15 19:00:00,2026-03-16 18:12:00,23.2,Concurrency/Race Condition,No,Closed
+BUG-2139,Issue in API Gateway: Input Validation Err,Medium,API Gateway,Production,2026-03-13 05:00:00,2026-03-19 14:30:00,153.5,Input Validation Error,Yes,Closed
+BUG-2140,Issue in Authentication: Schema Incompatibili,High,Authentication,Staging,2026-04-17 02:00:00,2026-04-19 00:18:00,46.3,Schema Incompatibility,Yes,Closed
+BUG-2141,Issue in Search & Indexer: Unhandled Null/Missi,High,Search & Indexer,Production,2026-01-19 21:00:00,2026-01-21 00:54:00,27.9,Unhandled Null/Missing Value,No,Closed
+BUG-2142,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,QA,2026-04-17 02:00:00,2026-04-23 00:00:00,142.0,Database Index Lock,No,Closed
+BUG-2143,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,Production,2026-05-12 12:00:00,2026-05-14 03:42:00,39.7,Third-Party API Outage,No,Closed
+BUG-2144,Issue in Authentication: Schema Incompatibili,Low,Authentication,Production,2026-05-20 20:00:00,2026-05-21 18:06:00,22.1,Schema Incompatibility,No,Closed
+BUG-2145,Issue in Billing & Checkout: Concurrency/Race Con,Medium,Billing & Checkout,QA,2026-05-12 19:00:00,2026-05-13 06:54:00,11.9,Concurrency/Race Condition,Yes,Closed
+BUG-2146,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,Production,2026-01-08 13:00:00,2026-01-10 05:18:00,40.3,Database Index Lock,No,Closed
+BUG-2147,Issue in Analytics UI: Database Index Lock,High,Analytics UI,Production,2026-01-28 09:00:00,2026-01-29 03:12:00,18.2,Database Index Lock,No,Closed
+BUG-2148,Issue in Billing & Checkout: Database Index Lock,High,Billing & Checkout,QA,2026-03-22 18:00:00,2026-03-22 22:42:00,4.7,Database Index Lock,Yes,Closed
+BUG-2149,Issue in Authentication: Input Validation Err,High,Authentication,Production,2026-02-19 18:00:00,2026-02-20 04:06:00,10.1,Input Validation Error,Yes,Closed
+BUG-2150,Issue in Search & Indexer: Unhandled Null/Missi,High,Search & Indexer,Staging,2026-02-09 00:00:00,2026-02-09 08:24:00,8.4,Unhandled Null/Missing Value,Yes,Closed
+BUG-2151,Issue in API Gateway: Schema Incompatibili,Medium,API Gateway,Staging,2026-03-17 02:00:00,2026-03-18 08:30:00,30.5,Schema Incompatibility,No,Closed
+BUG-2152,Issue in Authentication: Input Validation Err,Medium,Authentication,Staging,2026-04-18 04:00:00,2026-04-22 22:30:00,114.5,Input Validation Error,No,Closed
+BUG-2153,Issue in Notification Service: Unhandled Null/Missi,High,Notification Service,QA,2026-04-18 01:00:00,2026-04-19 04:12:00,27.2,Unhandled Null/Missing Value,No,Closed
+BUG-2154,Issue in Authentication: Schema Incompatibili,Low,Authentication,Production,2026-04-22 03:00:00,2026-04-23 16:06:00,37.1,Schema Incompatibility,No,Closed
+BUG-2155,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Staging,2026-01-12 18:00:00,2026-01-13 19:48:00,25.8,Schema Incompatibility,Yes,Closed
+BUG-2156,Issue in Notification Service: Database Index Lock,High,Notification Service,QA,2026-03-15 07:00:00,2026-03-15 22:30:00,15.5,Database Index Lock,No,Closed
+BUG-2157,Issue in Authentication: Database Index Lock,Medium,Authentication,Staging,2026-01-08 12:00:00,2026-01-10 07:54:00,43.9,Database Index Lock,No,Closed
+BUG-2158,Issue in Billing & Checkout: Third-Party API Outa,Medium,Billing & Checkout,Production,2026-04-25 11:00:00,2026-04-26 21:42:00,34.7,Third-Party API Outage,Yes,Closed
+BUG-2159,Issue in API Gateway: Unhandled Null/Missi,High,API Gateway,Production,2026-03-19 21:00:00,2026-03-21 20:18:00,47.3,Unhandled Null/Missing Value,No,Closed
+BUG-2160,Issue in Analytics UI: Third-Party API Outa,High,Analytics UI,Staging,2026-04-02 19:00:00,2026-04-03 00:18:00,5.3,Third-Party API Outage,No,Closed
+BUG-2161,Issue in Analytics UI: Concurrency/Race Con,High,Analytics UI,Staging,2026-05-25 14:00:00,2026-05-25 22:06:00,8.1,Concurrency/Race Condition,No,Closed
+BUG-2162,Issue in Analytics UI: Third-Party API Outa,Medium,Analytics UI,Production,2026-05-24 04:00:00,2026-05-24 17:36:00,13.6,Third-Party API Outage,No,Closed
+BUG-2163,Issue in Search & Indexer: Schema Incompatibili,High,Search & Indexer,Staging,2026-01-26 20:00:00,2026-01-27 22:48:00,26.8,Schema Incompatibility,No,Closed
+BUG-2164,Issue in API Gateway: Third-Party API Outa,Medium,API Gateway,Staging,2026-04-06 04:00:00,2026-04-12 21:24:00,161.4,Third-Party API Outage,No,Closed
+BUG-2165,Issue in Search & Indexer: Unhandled Null/Missi,Medium,Search & Indexer,Staging,2026-04-21 17:00:00,2026-04-22 00:30:00,7.5,Unhandled Null/Missing Value,No,Closed
+BUG-2166,Issue in Search & Indexer: Unhandled Null/Missi,High,Search & Indexer,Production,2026-04-28 13:00:00,2026-04-29 23:30:00,34.5,Unhandled Null/Missing Value,No,Closed
+BUG-2167,Issue in Billing & Checkout: Schema Incompatibili,Medium,Billing & Checkout,Production,2026-02-14 06:00:00,2026-02-15 07:42:00,25.7,Schema Incompatibility,No,Closed
+BUG-2168,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Production,2026-04-21 03:00:00,2026-04-21 22:06:00,19.1,Schema Incompatibility,No,Closed
+BUG-2169,Issue in Analytics UI: Input Validation Err,Medium,Analytics UI,Staging,2026-02-07 09:00:00,2026-02-08 11:54:00,26.9,Input Validation Error,No,Closed
+BUG-2170,Issue in Notification Service: Database Index Lock,Low,Notification Service,QA,2026-03-17 23:00:00,2026-03-23 02:18:00,123.3,Database Index Lock,No,Closed
+BUG-2171,Issue in Notification Service: Third-Party API Outa,Critical,Notification Service,QA,2026-04-14 20:00:00,2026-04-14 21:24:00,1.4,Third-Party API Outage,No,Closed
+BUG-2172,Issue in Authentication: Unhandled Null/Missi,High,Authentication,Staging,2026-05-08 03:00:00,2026-05-09 11:36:00,32.6,Unhandled Null/Missing Value,No,Closed
+BUG-2173,Issue in Notification Service: Unhandled Null/Missi,Medium,Notification Service,Staging,2026-02-06 16:00:00,2026-02-07 23:30:00,31.5,Unhandled Null/Missing Value,Yes,Closed
+BUG-2174,Issue in Analytics UI: Third-Party API Outa,Medium,Analytics UI,QA,2026-01-19 13:00:00,2026-01-21 12:42:00,47.7,Third-Party API Outage,No,Closed
+BUG-2175,Issue in Analytics UI: Schema Incompatibili,Low,Analytics UI,Staging,2026-02-15 10:00:00,2026-02-20 05:06:00,115.1,Schema Incompatibility,No,Closed
+BUG-2176,Issue in Billing & Checkout: Database Index Lock,Medium,Billing & Checkout,QA,2026-03-18 11:00:00,2026-03-20 17:24:00,54.4,Database Index Lock,Yes,Closed
+BUG-2177,Issue in API Gateway: Unhandled Null/Missi,High,API Gateway,QA,2026-02-16 12:00:00,2026-02-18 05:48:00,41.8,Unhandled Null/Missing Value,No,Closed
+BUG-2178,Issue in Search & Indexer: Unhandled Null/Missi,Low,Search & Indexer,Staging,2026-04-30 05:00:00,2026-04-30 12:00:00,7.0,Unhandled Null/Missing Value,No,Closed
+BUG-2179,Issue in Analytics UI: Unhandled Null/Missi,High,Analytics UI,Production,2026-04-05 23:00:00,2026-04-06 16:18:00,17.3,Unhandled Null/Missing Value,Yes,Closed
+BUG-2180,Issue in Analytics UI: Concurrency/Race Con,High,Analytics UI,QA,2026-03-28 20:00:00,2026-03-31 17:54:00,69.9,Concurrency/Race Condition,No,Closed
+BUG-2181,Issue in Search & Indexer: Unhandled Null/Missi,Medium,Search & Indexer,Staging,2026-04-25 15:00:00,2026-04-27 15:18:00,48.3,Unhandled Null/Missing Value,No,Closed
+BUG-2182,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,Production,2026-01-02 22:00:00,2026-01-05 23:00:00,73.0,Unhandled Null/Missing Value,No,Closed
+BUG-2183,Issue in Authentication: Concurrency/Race Con,Critical,Authentication,Staging,2026-03-02 11:00:00,2026-03-02 16:42:00,5.7,Concurrency/Race Condition,No,Closed
+BUG-2184,Issue in Notification Service: Concurrency/Race Con,Critical,Notification Service,Staging,2026-01-16 05:00:00,2026-01-16 16:12:00,11.2,Concurrency/Race Condition,Yes,Closed
+BUG-2185,Issue in Analytics UI: Schema Incompatibili,Low,Analytics UI,Staging,2026-05-20 12:00:00,2026-05-21 13:48:00,25.8,Schema Incompatibility,Yes,Closed
+BUG-2186,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,Production,2026-02-09 07:00:00,2026-02-13 19:30:00,108.5,Schema Incompatibility,No,Closed
+BUG-2187,Issue in Search & Indexer: Concurrency/Race Con,Medium,Search & Indexer,Staging,2026-01-22 22:00:00,2026-01-23 16:24:00,18.4,Concurrency/Race Condition,No,Closed
+BUG-2188,Issue in Search & Indexer: Unhandled Null/Missi,Low,Search & Indexer,Production,2026-03-25 00:00:00,2026-03-26 07:48:00,31.8,Unhandled Null/Missing Value,No,Closed
+BUG-2189,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,Staging,2026-03-09 01:00:00,2026-03-11 03:42:00,50.7,Third-Party API Outage,No,Closed
+BUG-2190,Issue in Search & Indexer: Database Index Lock,Low,Search & Indexer,Staging,2026-04-17 20:00:00,2026-04-21 03:06:00,79.1,Database Index Lock,No,Closed
+BUG-2191,Issue in Analytics UI: Input Validation Err,Medium,Analytics UI,Production,2026-04-17 22:00:00,2026-04-18 04:54:00,6.9,Input Validation Error,No,Closed
+BUG-2192,Issue in Search & Indexer: Concurrency/Race Con,Critical,Search & Indexer,Production,2026-04-10 21:00:00,2026-04-11 07:18:00,10.3,Concurrency/Race Condition,No,Closed
+BUG-2193,Issue in Billing & Checkout: Database Index Lock,Medium,Billing & Checkout,QA,2026-01-31 11:00:00,2026-02-02 21:12:00,58.2,Database Index Lock,No,Closed
+BUG-2194,Issue in Authentication: Database Index Lock,Low,Authentication,Staging,2026-05-09 18:00:00,2026-05-14 08:18:00,110.3,Database Index Lock,No,Closed
+BUG-2195,Issue in Notification Service: Third-Party API Outa,Critical,Notification Service,Production,2026-04-19 16:00:00,2026-04-19 20:42:00,4.7,Third-Party API Outage,No,Closed
+BUG-2196,Issue in Search & Indexer: Third-Party API Outa,Critical,Search & Indexer,Production,2026-04-23 14:00:00,2026-04-23 23:00:00,9.0,Third-Party API Outage,No,Closed
+BUG-2197,Issue in API Gateway: Third-Party API Outa,Medium,API Gateway,Production,2026-04-12 23:00:00,2026-04-13 21:54:00,22.9,Third-Party API Outage,Yes,Closed
+BUG-2198,Issue in API Gateway: Input Validation Err,High,API Gateway,Staging,2026-01-06 00:00:00,2026-01-06 22:54:00,22.9,Input Validation Error,No,Closed
+BUG-2199,Issue in Search & Indexer: Schema Incompatibili,Medium,Search & Indexer,Staging,2026-03-25 18:00:00,2026-03-27 06:00:00,36.0,Schema Incompatibility,No,Closed
+BUG-2200,Issue in Notification Service: Unhandled Null/Missi,High,Notification Service,Staging,2026-01-26 21:00:00,2026-01-27 17:42:00,20.7,Unhandled Null/Missing Value,Yes,Closed
+BUG-2201,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,Production,2026-05-30 12:00:00,2026-06-01 13:18:00,49.3,Concurrency/Race Condition,No,Closed
+BUG-2202,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,Staging,2026-01-09 02:00:00,2026-01-10 11:18:00,33.3,Unhandled Null/Missing Value,No,Closed
+BUG-2203,Issue in Billing & Checkout: Database Index Lock,Low,Billing & Checkout,Staging,2026-02-23 13:00:00,2026-03-19 01:18:00,564.3,Database Index Lock,No,Closed
+BUG-2204,Issue in Analytics UI: Input Validation Err,Low,Analytics UI,Staging,2026-03-28 02:00:00,2026-04-07 08:30:00,246.5,Input Validation Error,No,Closed
+BUG-2205,Issue in Analytics UI: Unhandled Null/Missi,Medium,Analytics UI,QA,2026-05-21 11:00:00,2026-05-21 13:30:00,2.5,Unhandled Null/Missing Value,Yes,Closed
+BUG-2206,Issue in Notification Service: Database Index Lock,Medium,Notification Service,Staging,2026-03-27 18:00:00,2026-03-28 17:12:00,23.2,Database Index Lock,No,Closed
+BUG-2207,Issue in Authentication: Concurrency/Race Con,Medium,Authentication,Staging,2026-05-21 22:00:00,2026-05-24 16:48:00,66.8,Concurrency/Race Condition,No,Closed
+BUG-2208,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,Production,2026-05-01 12:00:00,2026-05-05 09:24:00,93.4,Third-Party API Outage,No,Closed
+BUG-2209,Issue in Search & Indexer: Unhandled Null/Missi,Medium,Search & Indexer,Production,2026-01-21 21:00:00,2026-01-23 18:12:00,45.2,Unhandled Null/Missing Value,No,Closed
+BUG-2210,Issue in Authentication: Database Index Lock,Medium,Authentication,Staging,2026-05-08 22:00:00,2026-05-10 10:12:00,36.2,Database Index Lock,No,Closed
+BUG-2211,Issue in Billing & Checkout: Input Validation Err,High,Billing & Checkout,Production,2026-01-02 23:00:00,2026-01-03 03:48:00,4.8,Input Validation Error,No,Closed
+BUG-2212,Issue in Billing & Checkout: Third-Party API Outa,Medium,Billing & Checkout,Staging,2026-01-12 06:00:00,2026-01-12 20:06:00,14.1,Third-Party API Outage,Yes,Closed
+BUG-2213,Issue in Search & Indexer: Database Index Lock,Medium,Search & Indexer,Staging,2026-05-16 22:00:00,2026-05-20 22:06:00,96.1,Database Index Lock,No,Closed
+BUG-2214,Issue in Notification Service: Concurrency/Race Con,Medium,Notification Service,QA,2026-01-11 09:00:00,2026-01-13 04:12:00,43.2,Concurrency/Race Condition,No,Closed
+BUG-2215,Issue in Search & Indexer: Third-Party API Outa,High,Search & Indexer,Staging,2026-02-21 09:00:00,2026-02-22 22:00:00,37.0,Third-Party API Outage,No,Closed
+BUG-2216,Issue in Notification Service: Database Index Lock,High,Notification Service,QA,2026-05-26 07:00:00,2026-05-26 20:30:00,13.5,Database Index Lock,Yes,Closed
+BUG-2217,Issue in Analytics UI: Database Index Lock,Medium,Analytics UI,Staging,2026-04-05 08:00:00,2026-04-05 12:06:00,4.1,Database Index Lock,No,Closed
+BUG-2218,Issue in Billing & Checkout: Unhandled Null/Missi,High,Billing & Checkout,Staging,2026-01-20 00:00:00,2026-01-21 01:36:00,25.6,Unhandled Null/Missing Value,No,Closed
+BUG-2219,Issue in Authentication: Concurrency/Race Con,High,Authentication,QA,2026-05-04 04:00:00,2026-05-05 00:30:00,20.5,Concurrency/Race Condition,Yes,Closed
+BUG-2220,Issue in Authentication: Schema Incompatibili,High,Authentication,Production,2026-04-09 09:00:00,2026-04-11 08:12:00,47.2,Schema Incompatibility,Yes,Closed
+BUG-2221,Issue in Analytics UI: Third-Party API Outa,High,Analytics UI,Staging,2026-01-24 10:00:00,2026-01-25 10:18:00,24.3,Third-Party API Outage,No,Closed
+BUG-2222,Issue in Notification Service: Database Index Lock,Medium,Notification Service,Staging,2026-03-14 08:00:00,2026-03-14 14:48:00,6.8,Database Index Lock,No,Closed
+BUG-2223,Issue in API Gateway: Third-Party API Outa,Medium,API Gateway,QA,2026-03-10 08:00:00,2026-03-16 12:42:00,148.7,Third-Party API Outage,No,Closed
+BUG-2224,Issue in Search & Indexer: Unhandled Null/Missi,Critical,Search & Indexer,QA,2026-01-28 05:00:00,2026-01-28 06:48:00,1.8,Unhandled Null/Missing Value,No,Closed
+BUG-2225,Issue in Authentication: Unhandled Null/Missi,Medium,Authentication,Staging,2026-04-05 14:00:00,2026-04-06 19:06:00,29.1,Unhandled Null/Missing Value,No,Closed
+BUG-2226,Issue in Notification Service: Input Validation Err,Low,Notification Service,Staging,2026-04-24 02:00:00,2026-04-28 18:30:00,112.5,Input Validation Error,No,Closed
+BUG-2227,Issue in Authentication: Concurrency/Race Con,Low,Authentication,Production,2026-05-21 02:00:00,2026-05-25 02:48:00,96.8,Concurrency/Race Condition,No,Closed
+BUG-2228,Issue in Analytics UI: Input Validation Err,Medium,Analytics UI,Staging,2026-04-19 11:00:00,2026-04-19 16:42:00,5.7,Input Validation Error,No,Closed
+BUG-2229,Issue in Analytics UI: Database Index Lock,High,Analytics UI,Staging,2026-05-27 10:00:00,2026-05-27 23:24:00,13.4,Database Index Lock,No,Closed
+BUG-2230,Issue in Billing & Checkout: Database Index Lock,Medium,Billing & Checkout,Staging,2026-01-03 19:00:00,2026-01-09 02:12:00,127.2,Database Index Lock,No,Closed
+BUG-2231,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,QA,2026-05-19 20:00:00,2026-05-20 22:42:00,26.7,Schema Incompatibility,Yes,Closed
+BUG-2232,Issue in Search & Indexer: Third-Party API Outa,Medium,Search & Indexer,QA,2026-05-26 13:00:00,2026-05-27 05:00:00,16.0,Third-Party API Outage,No,Closed
+BUG-2233,Issue in Search & Indexer: Third-Party API Outa,Medium,Search & Indexer,QA,2026-01-30 18:00:00,2026-02-02 15:00:00,69.0,Third-Party API Outage,No,Closed
+BUG-2234,Issue in Search & Indexer: Third-Party API Outa,High,Search & Indexer,Staging,2026-01-15 02:00:00,2026-01-15 12:36:00,10.6,Third-Party API Outage,Yes,Closed
+BUG-2235,Issue in Notification Service: Third-Party API Outa,Medium,Notification Service,Staging,2026-03-05 13:00:00,2026-03-06 01:54:00,12.9,Third-Party API Outage,No,Closed
+BUG-2236,Issue in Analytics UI: Third-Party API Outa,High,Analytics UI,Production,2026-02-25 08:00:00,2026-03-01 03:00:00,91.0,Third-Party API Outage,No,Closed
+BUG-2237,Issue in Notification Service: Schema Incompatibili,Low,Notification Service,QA,2026-02-07 04:00:00,2026-02-12 07:42:00,123.7,Schema Incompatibility,Yes,Closed
+BUG-2238,Issue in Analytics UI: Schema Incompatibili,Medium,Analytics UI,Staging,2026-02-13 23:00:00,2026-02-15 00:48:00,25.8,Schema Incompatibility,No,Closed
+BUG-2239,Issue in Billing & Checkout: Concurrency/Race Con,Medium,Billing & Checkout,QA,2026-01-21 15:00:00,2026-01-27 14:36:00,143.6,Concurrency/Race Condition,No,Closed
+BUG-2240,Issue in Search & Indexer: Schema Incompatibili,Low,Search & Indexer,Staging,2026-02-05 00:00:00,2026-02-07 18:36:00,66.6,Schema Incompatibility,No,Closed
+BUG-2241,Issue in Billing & Checkout: Unhandled Null/Missi,Medium,Billing & Checkout,Production,2026-05-20 21:00:00,2026-05-21 06:36:00,9.6,Unhandled Null/Missing Value,No,Closed
+BUG-2242,Issue in API Gateway: Concurrency/Race Con,High,API Gateway,Staging,2026-02-11 19:00:00,2026-02-12 18:06:00,23.1,Concurrency/Race Condition,No,Closed
+BUG-2243,Issue in Notification Service: Database Index Lock,Low,Notification Service,QA,2026-02-21 17:00:00,2026-02-25 13:54:00,92.9,Database Index Lock,No,Closed
+BUG-2244,Issue in Analytics UI: Concurrency/Race Con,Medium,Analytics UI,QA,2026-03-11 18:00:00,2026-03-12 06:12:00,12.2,Concurrency/Race Condition,No,Closed
+BUG-2245,Issue in Authentication: Database Index Lock,Medium,Authentication,QA,2026-04-01 04:00:00,2026-04-01 16:24:00,12.4,Database Index Lock,No,Closed
+BUG-2246,Issue in Analytics UI: Database Index Lock,High,Analytics UI,Staging,2026-05-12 23:00:00,2026-05-13 18:42:00,19.7,Database Index Lock,No,Closed
+BUG-2247,Issue in API Gateway: Database Index Lock,Critical,API Gateway,Staging,2026-04-10 00:00:00,2026-04-10 04:06:00,4.1,Database Index Lock,No,Closed
+BUG-2248,Issue in Authentication: Unhandled Null/Missi,Medium,Authentication,QA,2026-02-22 08:00:00,2026-02-25 23:36:00,87.6,Unhandled Null/Missing Value,Yes,Closed
+BUG-2249,Issue in API Gateway: Database Index Lock,Medium,API Gateway,Production,2026-01-25 05:00:00,2026-01-27 17:18:00,60.3,Database Index Lock,Yes,Closed
+BUG-2250,Issue in Billing & Checkout: Input Validation Err,Low,Billing & Checkout,Production,2026-02-22 09:00:00,2026-02-25 21:36:00,84.6,Input Validation Error,No,Closed

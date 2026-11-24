@@ -1,0 +1,32 @@
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.models.dataset import Dataset
+from app.schemas.analytics import HypothesisTestRequest, HypothesisTestResponse, ABTestRequest, ABTestResponse
+from app.services.statistics_service import StatisticsService
+
+router = APIRouter(prefix="/statistics", tags=["Statistical Analysis"])
+
+@router.get("/descriptive/{dataset_id}")
+def get_descriptive_stats(dataset_id: str, db: Session = Depends(get_db)):
+    ds = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+    if not ds:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    return StatisticsService.calculate_descriptive_stats(ds)
+
+@router.post("/hypothesis-test", response_model=HypothesisTestResponse)
+def run_hypothesis_test(req: HypothesisTestRequest, db: Session = Depends(get_db)):
+    ds = db.query(Dataset).filter(Dataset.id == req.dataset_id).first()
+    if not ds:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    try:
+        return StatisticsService.run_hypothesis_test(req, ds)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@router.post("/ab-test", response_model=ABTestResponse)
+def calculate_ab_test(req: ABTestRequest):
+    try:
+        return StatisticsService.calculate_ab_test(req)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
